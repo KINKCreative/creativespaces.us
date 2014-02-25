@@ -151,16 +151,22 @@ class Page_Controller extends ContentController {
 	
 	public function setMessage($type, $message)
 	   {   
-	       Session::set('Message', array(
-	           'MessageType' => $type,
-	           'Message' => $message
-	       ));
+	   	   $message = array(
+	   	       'MessageType' => $type,
+	   	       'Message' => $message
+	   	   );
+	   	   $messageArray = array();
+	   	   if($tmp = Session::get("Message")) {
+	   	     $messageArray = $tmp;
+	   	   }
+	   	   $messageArray[] = $message;	   	   
+	       Session::set('Message', $messageArray);
 	   }
 	
 	public function getMessage(){
 		if($message = Session::get('Message')){
+			$array = new ArrayList($message);
 			Session::clear('Message');
-			$array = new ArrayData($message);
 			return $array->renderWith('Message');
 		}
 	}
