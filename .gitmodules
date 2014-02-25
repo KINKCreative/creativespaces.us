@@ -25,3 +25,9 @@
 [submodule "RestfulServer"]
 	path = RestfulServer
 	url = https://github.com/silverstripe/silverstripe-restfulserver.git
+[submodule "js/skrollr"]
+	path = js/skrollr
+	url = https://github.com/Prinzhorn/skrollr.git
+[submodule "google-sitemaps"]
+	path = google-sitemaps
+	url = https://github.com/silverstripe-labs/silverstripe-googlesitemaps.git

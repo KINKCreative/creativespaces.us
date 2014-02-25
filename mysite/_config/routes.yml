@@ -1,0 +1,8 @@
+---
+Name: customroutes
+After: framework/routes#coreroutes
+---
+Director:
+  rules:
+    'search/$ID' : 'Search_Controller'
+    'project' : 'ProjectController'
