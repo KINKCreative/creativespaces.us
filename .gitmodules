@@ -4,3 +4,6 @@
 [submodule "foundation-forms"]
 	path = foundation-forms
 	url = https://github.com/ryanwachtl/silverstripe-foundation-forms.git
+[submodule "themes/foundation"]
+	path = themes/foundation
+	url = https://github.com/ryanwachtl/silverstripe-foundation-theme.git
