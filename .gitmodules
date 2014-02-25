@@ -16,3 +16,12 @@
 [submodule "userforms"]
 	path = userforms
 	url = https://github.com/silverstripe/silverstripe-userforms.git
+[submodule "SortableGridField"]
+	path = SortableGridField
+	url = https://github.com/UndefinedOffset/SortableGridField.git
+[submodule "GridFieldBulkEditingTools"]
+	path = GridFieldBulkEditingTools
+	url = https://github.com/colymba/GridFieldBulkEditingTools.git
+[submodule "RestfulServer"]
+	path = RestfulServer
+	url = https://github.com/silverstripe/silverstripe-restfulserver.git
