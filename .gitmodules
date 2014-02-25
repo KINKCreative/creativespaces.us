@@ -7,3 +7,12 @@
 [submodule "themes/foundation"]
 	path = themes/foundation
 	url = https://github.com/ryanwachtl/silverstripe-foundation-theme.git
+[submodule "cms"]
+	path = cms
+	url = https://github.com/silverstripe/silverstripe-cms.git
+[submodule "framework"]
+	path = framework
+	url = https://github.com/silverstripe/silverstripe-framework.git
+[submodule "userforms"]
+	path = userforms
+	url = https://github.com/silverstripe/silverstripe-userforms.git
