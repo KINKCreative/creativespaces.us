@@ -6,7 +6,7 @@
 	url = https://github.com/ryanwachtl/silverstripe-foundation-forms.git
 [submodule "themes/foundation"]
 	path = themes/foundation
-	url = https://github.com/ryanwachtl/silverstripe-foundation-theme.git
+	url = git://github.com/ryanwachtl/silverstripe-foundation-theme.git
 [submodule "cms"]
 	path = cms
 	url = https://github.com/silverstripe/silverstripe-cms.git
