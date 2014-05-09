@@ -36,7 +36,7 @@ class Page extends SiteTree {
 		$fields->addFieldToTab("Root.Images",new HeaderField("ImageNote","Main image",3));
 		$fields->addFieldToTab("Root.Images",$imageField);
 		$fields->addFieldToTab("Root.Images",new LiteralField("ImageNote2","<br/>"));
-		$fields->addFieldToTab("Root.Images",new HeaderField("ImageNote3","Photos / leading images",3));
+		$fields->addFieldToTab("Root.Images",new HeaderField("ImageNote3","Photos / slider images",3));
 		$fields->addFieldToTab("Root.Images",$photoManager);
 	 	
 	 	$fields->addFieldToTab("Root.Main", new TextareaField("Summary","Enter summary"));
