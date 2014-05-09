@@ -1,0 +1,28 @@
+{
+  "name": "creativespaces.us",
+  "version": "1.0.0",
+  "description": "Microsite platform built on SilverStripe and Foundation.",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/KINKCreative/creativespaces.us.git"
+  },
+  "keywords": [
+    "/"
+  ],
+  "author": "@klemennovak",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/KINKCreative/creativespaces.us/issues"
+  },
+  "homepage": "https://github.com/KINKCreative/creativespaces.us",
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-nodeunit": "~0.3.3",
+    "grunt-contrib-uglify": "~0.4.0"
+  }
+}
