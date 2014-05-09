@@ -1,0 +1,22 @@
+// Grid
+// $row-width: rem-calc(1000);
+// $column-gutter: rem-calc(30);
+// $total-columns: 12;
+
+// Default Colors
+// $primary-color: #008CBA;
+$primary-color: #67b4ff;
+// $secondary-color: #e7e7e7;
+// $alert-color: #f04124;
+// $success-color: #43AC6A;
+// $warning-color: #f08a24;
+// $info-color: #a0d3e8;
+
+
+@import "../../../js/foundation/scss/settings";
+@import "foundation";
+
+.main {
+	padding-top: 32px;
+	min-height: 320px;
+}
