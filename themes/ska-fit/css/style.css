@@ -6724,7 +6724,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #222222;
   text-rendering: optimizeLegibility;
   margin-top: 0.2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   line-height: 1.4;
 }
 /* line 239, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_type.scss */
@@ -7792,7 +7792,7 @@ th.hide-for-touch {
   display: table-cell !important;
 }
 
-/* line 25, ../scss/style.scss */
+/* line 27, ../scss/style.scss */
 .main {
   padding-top: 32px;
   min-height: 320px;

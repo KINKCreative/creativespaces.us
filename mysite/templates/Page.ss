@@ -17,8 +17,7 @@
 	<% end_if %>
 	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
-	<link rel="stylesheet" href="$ThemeDir/css/app.css" />
-	<script src="js/foundation/bower_components/modernizr/modernizr.js"></script>
+	<link rel="stylesheet" href="$ThemeDir/css/style.css" />
 </head>
 <body class="$ClassName.ATT">
 
@@ -58,6 +57,6 @@
 	</div>
 
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
-	<script src="js/min/app.min.js"></script>
+	<script src="$ThemeDir/js/min/app.min.js"></script>
 </body>
 </html>
