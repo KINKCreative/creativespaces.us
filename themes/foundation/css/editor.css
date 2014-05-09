@@ -1,4 +1,0 @@
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: File to import not found or unreadable: foundation.\A               Load paths:\A                 /Users/klemen/Sites/creativespaces.us/themes/foundation/scss\A                 /Users/klemen/.rvm/gems/ruby-2.1.1/gems/compass-0.12.6/frameworks/blueprint/stylesheets\A                 /Users/klemen/.rvm/gems/ruby-2.1.1/gems/compass-0.12.6/frameworks/compass/stylesheets\A                 Compass::SpriteImporter\A         on line 2 of /Users/klemen/Sites/creativespaces.us/themes/foundation/scss/editor.scss\A \A 1: /Users/klemen/Sites/creativespaces.us/themes/foundation/scss/editor.scss"; }
