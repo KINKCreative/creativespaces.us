@@ -31,7 +31,3 @@
 [submodule "google-sitemaps"]
 	path = google-sitemaps
 	url = https://github.com/silverstripe-labs/silverstripe-googlesitemaps.git
-	
-[submodule "subsites"]
-	path = subsites
-	url = http://creativespaces.dev/dev/build
