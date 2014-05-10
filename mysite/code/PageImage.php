@@ -45,7 +45,7 @@ class PageImage extends DataObject {
 	function LargeImage() {
 		if($this->Image()) {
 			// if($this->Image()->Landscape()) {
-				return $this->Image()->CropppedImage(1280,320);	
+				return $this->Image()->cropppedImage(1280,320);	
 			// }
 			// else {
 			// 	return $this->Image()->SetHeight(1024);	
@@ -56,7 +56,7 @@ class PageImage extends DataObject {
 	function MediumImage() {
 		// if($this->Image()) {
 		// 	if($this->Image()->Landscape()) {
-				return $this->Image()->CroppedImage(840,280);	
+				return $this->Image()->croppedImage(840,280);	
 		// 	}
 		// 	else {
 		// 		return $this->Image()->SetHeight(680);	
@@ -67,7 +67,7 @@ class PageImage extends DataObject {
 	function SmallImage() {
 		// if($this->Image()) {
 		// 	if($this->Image()->Landscape()) {
-				return $this->Image()->SetWidth(780,260);	
+				return $this->Image()->croppedImage(780,260);	
 		// 	}
 		// 	else {
 		// 		return $this->Image()->SetHeight(680);	
@@ -77,7 +77,7 @@ class PageImage extends DataObject {
 	
 	function Square($width = 400) {
 		if($this->Image()) {
-			return $this->Image()->CroppedImage($width,$width);
+			return $this->Image()->croppedImage($width,$width);
 		}
 	}
 	
