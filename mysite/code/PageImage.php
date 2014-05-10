@@ -45,7 +45,7 @@ class PageImage extends DataObject {
 	function LargeImage() {
 		if($this->Image()) {
 			// if($this->Image()->Landscape()) {
-				return $this->Image()->cropppedImage(1280,320);	
+				return $this->Image()->croppedImage(1280,320);	
 			// }
 			// else {
 			// 	return $this->Image()->SetHeight(1024);	
