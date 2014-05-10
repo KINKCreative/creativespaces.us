@@ -2,25 +2,15 @@
 class HomePage extends Page {
 
 	private static $db = array(
-		"FeaturedProductTagline" => "Varchar(64)"
 	);
 
 	private static $has_one = array(
-		'FeaturedProduct' => 'Product'
 	);
 	
 	function getCMSFields() {
-		    $fields = parent::getCMSFields();
-		    if(class_exists("Product")) {
-		    	$products = DataObject::get("Product","","Title ASC");
-		    	if($products) {
-		    		$fields->addFieldToTab("Root.Content.Featured",new DropdownField("FeaturedProductID", "Featured product", $products->toDropdownMap("ID","Title","Select")));
-		    		$fields->addFieldToTab("Root.Content.Featured", new TextField("FeaturedProductTagline"));
-		    	}
-		    }
-		 	
-			return $fields;
-		}
+	    $fields = parent::getCMSFields();
+		return $fields;
+	}
 
 }
 class HomePage_Controller extends Page_Controller {

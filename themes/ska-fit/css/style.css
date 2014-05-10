@@ -1,4 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Rock+Salt);
+/* Default Colors */
+/* $alert-color: #f04124;
+   $success-color: #43AC6A;
+   $warning-color: #f08a24;
+   $info-color: #a0d3e8; */
+/* PRESETS */
 /* line 260, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-version {
   font-family: "/5.2.2/";
@@ -1670,14 +1676,14 @@ select {
 }
 /* line 118, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
 .alert-box.success {
-  background-color: #afc908;
-  border-color: #97ad07;
+  background-color: #43ac6a;
+  border-color: #3a945b;
   color: white;
 }
 /* line 119, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
 .alert-box.alert {
-  background-color: #bd240d;
-  border-color: #a31f0b;
+  background-color: #f04124;
+  border-color: #de2d0f;
   color: white;
 }
 /* line 120, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
@@ -1688,8 +1694,8 @@ select {
 }
 /* line 121, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
 .alert-box.warning {
-  background-color: #ffb515;
-  border-color: #eda200;
+  background-color: #f08a24;
+  border-color: #de770f;
   color: white;
 }
 /* line 122, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
@@ -2356,13 +2362,13 @@ button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button
 }
 /* line 194, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.success, .button.success {
-  background-color: #afc908;
-  border-color: #8ca106;
+  background-color: #43ac6a;
+  border-color: #368a55;
   color: white;
 }
 /* line 134, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
-  background-color: #8ca106;
+  background-color: #368a55;
 }
 /* line 145, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
@@ -2370,13 +2376,13 @@ button.success:hover, button.success:focus, .button.success:hover, .button.succe
 }
 /* line 195, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.alert, .button.alert {
-  background-color: #bd240d;
-  border-color: #971d0a;
+  background-color: #f04124;
+  border-color: #cf2a0e;
   color: white;
 }
 /* line 134, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
-  background-color: #971d0a;
+  background-color: #cf2a0e;
 }
 /* line 145, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
@@ -2474,8 +2480,8 @@ button.disabled.secondary:hover, button.disabled.secondary:focus, button[disable
 }
 /* line 210, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled.success, button[disabled].success, .button.disabled.success, .button[disabled].success {
-  background-color: #afc908;
-  border-color: #8ca106;
+  background-color: #43ac6a;
+  border-color: #368a55;
   color: white;
   cursor: default;
   opacity: 0.7;
@@ -2483,7 +2489,7 @@ button.disabled.success, button[disabled].success, .button.disabled.success, .bu
 }
 /* line 134, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
-  background-color: #8ca106;
+  background-color: #368a55;
 }
 /* line 145, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
@@ -2491,12 +2497,12 @@ button.disabled.success:hover, button.disabled.success:focus, button[disabled].s
 }
 /* line 155, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
-  background-color: #afc908;
+  background-color: #43ac6a;
 }
 /* line 211, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled.alert, button[disabled].alert, .button.disabled.alert, .button[disabled].alert {
-  background-color: #bd240d;
-  border-color: #971d0a;
+  background-color: #f04124;
+  border-color: #cf2a0e;
   color: white;
   cursor: default;
   opacity: 0.7;
@@ -2504,7 +2510,7 @@ button.disabled.alert, button[disabled].alert, .button.disabled.alert, .button[d
 }
 /* line 134, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
-  background-color: #971d0a;
+  background-color: #cf2a0e;
 }
 /* line 145, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
@@ -2512,7 +2518,7 @@ button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert
 }
 /* line 155, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
-  background-color: #bd240d;
+  background-color: #f04124;
 }
 
 @media only screen and (min-width: 40.063em) {
@@ -3754,7 +3760,7 @@ fieldset legend {
   font-size: 0.75rem;
   font-weight: normal;
   font-style: italic;
-  background: #bd240d;
+  background: #f04124;
   color: white;
 }
 /* line 444, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_forms.scss */
@@ -3771,7 +3777,7 @@ span.error, small.error {
   font-size: 0.75rem;
   font-weight: normal;
   font-style: italic;
-  background: #bd240d;
+  background: #f04124;
   color: white;
 }
 
@@ -3789,7 +3795,7 @@ span.error, small.error {
 /* line 464, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_forms.scss */
 .error label,
 .error label.error {
-  color: #bd240d;
+  color: #f04124;
 }
 /* line 468, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_forms.scss */
 .error small.error {
@@ -3800,7 +3806,7 @@ span.error, small.error {
   font-size: 0.75rem;
   font-weight: normal;
   font-style: italic;
-  background: #bd240d;
+  background: #f04124;
   color: white;
 }
 /* line 473, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_forms.scss */
@@ -3827,7 +3833,7 @@ textarea.error {
 
 /* line 494, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_forms.scss */
 label.error {
-  color: #bd240d;
+  color: #f04124;
 }
 
 /* line 52, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_inline-lists.scss */
@@ -4091,12 +4097,12 @@ kbd {
 }
 /* line 99, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_labels.scss */
 .label.alert {
-  background-color: #bd240d;
+  background-color: #f04124;
   color: white;
 }
 /* line 100, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_labels.scss */
 .label.success {
-  background-color: #afc908;
+  background-color: #43ac6a;
   color: white;
 }
 /* line 101, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_labels.scss */
@@ -4749,13 +4755,13 @@ ul.pagination li {
 }
 /* line 65, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_progress-bars.scss */
 .progress.success .meter {
-  background: #afc908;
+  background: #43ac6a;
   height: 100%;
   display: block;
 }
 /* line 66, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_progress-bars.scss */
 .progress.alert .meter {
-  background: #bd240d;
+  background: #f04124;
   height: 100%;
   display: block;
 }
@@ -5372,7 +5378,7 @@ div.switch span:last-child {
   border-color: #b3b3b3;
   background: white;
   background: linear-gradient(to bottom, #ffffff 0%, #f2f2f2 100%);
-  box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 980px #fcfeee, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px whitesmoke;
+  box-shadow: 2px 0 10px 0 rgba(0, 0, 0, 0.07), 1000px 0 0 980px #f3faf6, -2px 0 10px 0 rgba(0, 0, 0, 0.07), -1000px 0 0 1000px whitesmoke;
 }
 /* line 218, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_switch.scss */
 div.switch:hover span:last-child, div.switch:focus span:last-child {
@@ -5989,13 +5995,13 @@ meta.foundation-mq-topbar {
 }
 /* line 320, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button.success {
-  background-color: #afc908;
-  border-color: #8ca106;
+  background-color: #43ac6a;
+  border-color: #368a55;
   color: white;
 }
 /* line 134, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 .top-bar-section ul li > a.button.success:hover, .top-bar-section ul li > a.button.success:focus {
-  background-color: #8ca106;
+  background-color: #368a55;
 }
 /* line 145, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 .top-bar-section ul li > a.button.success:hover, .top-bar-section ul li > a.button.success:focus {
@@ -6003,13 +6009,13 @@ meta.foundation-mq-topbar {
 }
 /* line 321, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button.alert {
-  background-color: #bd240d;
-  border-color: #971d0a;
+  background-color: #f04124;
+  border-color: #cf2a0e;
   color: white;
 }
 /* line 134, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 .top-bar-section ul li > a.button.alert:hover, .top-bar-section ul li > a.button.alert:focus {
-  background-color: #971d0a;
+  background-color: #cf2a0e;
 }
 /* line 145, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 .top-bar-section ul li > a.button.alert:hover, .top-bar-section ul li > a.button.alert:focus {
@@ -6048,13 +6054,13 @@ meta.foundation-mq-topbar {
 }
 /* line 331, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > button.success {
-  background-color: #afc908;
-  border-color: #8ca106;
+  background-color: #43ac6a;
+  border-color: #368a55;
   color: white;
 }
 /* line 134, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 .top-bar-section ul li > button.success:hover, .top-bar-section ul li > button.success:focus {
-  background-color: #8ca106;
+  background-color: #368a55;
 }
 /* line 145, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 .top-bar-section ul li > button.success:hover, .top-bar-section ul li > button.success:focus {
@@ -6062,13 +6068,13 @@ meta.foundation-mq-topbar {
 }
 /* line 332, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > button.alert {
-  background-color: #bd240d;
-  border-color: #971d0a;
+  background-color: #f04124;
+  border-color: #cf2a0e;
   color: white;
 }
 /* line 134, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 .top-bar-section ul li > button.alert:hover, .top-bar-section ul li > button.alert:focus {
-  background-color: #971d0a;
+  background-color: #cf2a0e;
 }
 /* line 145, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 .top-bar-section ul li > button.alert:hover, .top-bar-section ul li > button.alert:focus {
@@ -6807,7 +6813,7 @@ small {
 code {
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-weight: bold;
-  color: #8a1a09;
+  color: #bd260d;
 }
 
 /* Lists */
@@ -7792,32 +7798,64 @@ th.hide-for-touch {
   display: table-cell !important;
 }
 
-/* line 29, ../scss/style.scss */
+/* STYLES BEGIN */
+/* line 30, ../../foundation/scss/style.scss */
 .main {
   padding-top: 32px;
   min-height: 320px;
 }
 
-/* line 34, ../scss/style.scss */
+/* BASE CLASSES */
+/* line 37, ../../foundation/scss/style.scss */
 section.pageSection {
-  background: #4e4e4e;
   min-height: 5em;
   padding-bottom: 2rem;
+  border-bottom: 1px solid #cacaca;
+  background: #e3e3e3;
 }
-/* line 38, ../scss/style.scss */
+/* line 42, ../../foundation/scss/style.scss */
 section.pageSection h1, section.pageSection p {
   text-align: center;
 }
-/* line 41, ../scss/style.scss */
+/* line 45, ../../foundation/scss/style.scss */
 section.pageSection h1 {
   margin-top: 2rem;
-  color: #FFFFFF;
 }
-/* line 45, ../scss/style.scss */
-section.pageSection p {
-  color: rgba(255, 255, 255, 0.8);
-}
-/* line 48, ../scss/style.scss */
+/* line 46, ../../foundation/scss/style.scss */
 section.pageSection p:last-child {
   margin-bottom: 0;
+}
+
+/* COLOR CLASSES */
+/* line 54, ../../foundation/scss/style.scss */
+section.dark-grey, div.dark-grey {
+  background: #272727;
+  border-bottom: 1px solid #0e0e0e;
+}
+/* line 58, ../../foundation/scss/style.scss */
+section.medium-grey, div.medium-grey {
+  background: #4e4e4e;
+  border-bottom: 1px solid #353535;
+}
+/* line 62, ../../foundation/scss/style.scss */
+section.black, div.black {
+  background: #000000;
+  border-bottom: 1px solid #333333;
+}
+/* line 67, ../../foundation/scss/style.scss */
+section.black h1, section.dark-grey h1, section.medium-grey h1, div.black h1, div.dark-grey h1, div.medium-grey h1 {
+  color: #FFFFFF;
+}
+/* line 70, ../../foundation/scss/style.scss */
+section.black p, section.dark-grey p, section.medium-grey p, div.black p, div.dark-grey p, div.medium-grey p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* line 76, ../../foundation/scss/style.scss */
+p.dark-grey, h1.dark-grey, h2.dark-grey, h3.dark-grey, h4.dark-grey, h5.dark-grey {
+  color: #272727;
+}
+/* line 79, ../../foundation/scss/style.scss */
+p.medium-grey, h1.medium-grey, h2.medium-grey, h3.medium-grey, h4.medium-grey, h5.medium-grey {
+  color: #4e4e4e;
 }

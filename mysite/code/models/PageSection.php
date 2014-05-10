@@ -5,12 +5,14 @@ class PageSection extends DataObject {
 	private static $db = array(
 		'Title' => 'Varchar(255)',
 		'Content' => 'HTMLText',
+		'ExtraClass' => 'Varchar(128)',
 		'SortOrder' => 'Int'
 	);
 
 	private static $has_one = array (
 		'Image' => 'Image',
-		'Page' => 'Page'
+		'Page' => 'Page',
+		'DisplayPage' => 'Page'
 	);
 	
 	function getCMSFields() {
@@ -18,10 +20,18 @@ class PageSection extends DataObject {
 		$uploadField = UploadField::create('Image','Select section image')
 						->setFolderName("images/backgrounds")
 						->setAllowedExtensions(array('jpg', 'jpeg', 'png', 'gif'));
+		$pages = DataObject::get("Page");
+    	if($pages) {
+    		$pageField = DropdownField::create("DisplayPageID", "Featured page", $pages->map("ID" , "Title"))->setEmptyString("Select");
+    	}
+	    //$fields = parent::getCMSFields();
+	    	
 		return new FieldList(
 			new TextField('Title'),
-			new HtmlEditorField("Content"),
-			$uploadField
+			new TextField('ExtraClass',"Additional CSS Class"),
+			HtmlEditorField::create("Content","Content")->setRows(6),
+			$uploadField,
+			$pageField
 		);
 	}
 		

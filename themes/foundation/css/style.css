@@ -1,3 +1,9 @@
+/* Default Colors */
+/* $alert-color: #f04124;
+   $success-color: #43AC6A;
+   $warning-color: #f08a24;
+   $info-color: #a0d3e8; */
+/* PRESETS */
 /* line 260, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_global.scss */
 meta.foundation-version {
   font-family: "/5.2.2/";
@@ -6723,7 +6729,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #222222;
   text-rendering: optimizeLegibility;
   margin-top: 0.2rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   line-height: 1.4;
 }
 /* line 239, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_type.scss */
@@ -7791,8 +7797,64 @@ th.hide-for-touch {
   display: table-cell !important;
 }
 
-/* line 19, ../scss/style.scss */
+/* STYLES BEGIN */
+/* line 30, ../scss/style.scss */
 .main {
   padding-top: 32px;
   min-height: 320px;
+}
+
+/* BASE CLASSES */
+/* line 37, ../scss/style.scss */
+section.pageSection {
+  min-height: 5em;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #cacaca;
+  background: #e3e3e3;
+}
+/* line 42, ../scss/style.scss */
+section.pageSection h1, section.pageSection p {
+  text-align: center;
+}
+/* line 45, ../scss/style.scss */
+section.pageSection h1 {
+  margin-top: 2rem;
+}
+/* line 46, ../scss/style.scss */
+section.pageSection p:last-child {
+  margin-bottom: 0;
+}
+
+/* COLOR CLASSES */
+/* line 54, ../scss/style.scss */
+section.dark-grey, div.dark-grey {
+  background: #272727;
+  border-bottom: 1px solid #0e0e0e;
+}
+/* line 58, ../scss/style.scss */
+section.medium-grey, div.medium-grey {
+  background: #4e4e4e;
+  border-bottom: 1px solid #353535;
+}
+/* line 62, ../scss/style.scss */
+section.black, div.black {
+  background: #000000;
+  border-bottom: 1px solid #333333;
+}
+/* line 67, ../scss/style.scss */
+section.black h1, section.dark-grey h1, section.medium-grey h1, div.black h1, div.dark-grey h1, div.medium-grey h1 {
+  color: #FFFFFF;
+}
+/* line 70, ../scss/style.scss */
+section.black p, section.dark-grey p, section.medium-grey p, div.black p, div.dark-grey p, div.medium-grey p {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* line 76, ../scss/style.scss */
+p.dark-grey, h1.dark-grey, h2.dark-grey, h3.dark-grey, h4.dark-grey, h5.dark-grey {
+  color: #272727;
+}
+/* line 79, ../scss/style.scss */
+p.medium-grey, h1.medium-grey, h2.medium-grey, h3.medium-grey, h4.medium-grey, h5.medium-grey {
+  color: #4e4e4e;
 }

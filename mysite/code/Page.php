@@ -12,7 +12,7 @@ class Page extends SiteTree {
 	
 	private static $has_many = array(
 		'Images' => 'PageImage',
-		'Sections' => 'PageSection'
+		'Sections' => 'PageSection.Page'
 	);
 	
 	function getCMSFields() {

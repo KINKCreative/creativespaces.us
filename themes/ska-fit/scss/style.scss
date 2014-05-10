@@ -1,6 +1,8 @@
 @import url(http://fonts.googleapis.com/css?family=Rock+Salt);
 $header-font-family: "Rock Salt", "Helvetica", Helvetica, Arial, sans-serif;
 
+@import "../../foundation/scss/style";
+
 // Grid
 // $row-width: rem-calc(1000);
 // $column-gutter: rem-calc(30);
@@ -13,39 +15,3 @@ $primary-color: #67b4ff;
 $alert-color: #bd240d;
 $success-color: #afc908;
 $warning-color: #ffb515;
-
-$header-bottom-margin: 1rem;
-
-$bright-blue: #79cae3;
-$dark-grey: #272727;
-$medium-grey: #4e4e4e;
-
-$section-padding: 2rem;
-
-
-@import "../../../js/foundation/scss/settings";
-@import "foundation";
-
-.main {
-	padding-top: 32px;
-	min-height: 320px;
-}
-
-section.pageSection {
-	background: $medium-grey;
-	min-height: 5em;
-	padding-bottom: $section-padding;
-	h1, p {
-		text-align: center;
-	}
-	h1 {
-		margin-top: $section-padding;
-		color: #FFFFFF;
-	}
-	p {
-		color: rgba(255,255,255,0.8);
-	}
-	p:last-child {
-		margin-bottom: 0;
-	}
-}
