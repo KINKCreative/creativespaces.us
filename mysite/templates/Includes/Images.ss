@@ -7,7 +7,7 @@
 			<% loop Images %>
 			<li>
 				<% if Link %><a href="$Link"><% end_if %>
-				<img src="$SmallImage.URL" alt="<% if Caption %>$Caption<% else %>Image-$Pos<% end_if %>" width="800" height="255" data-interchange="[$SmallImage.URL, (default)], [$MediumImage.URL, (small)], [$LargeImage.URL, (medium)],"/>
+				<img src="$SmallImage.URL" alt="<% if Caption %>$Caption<% else %>Image-$Pos<% end_if %>" data-interchange="[$SmallImage.URL, (default)], [$MediumImage.URL, (small)], [$LargeImage.URL, (medium)],"/>
 				<% if Caption %><div class="orbit-caption">$Caption</div><% end_if %>
 				<% if Link %></a><% end_if %>
 		  	</li>
