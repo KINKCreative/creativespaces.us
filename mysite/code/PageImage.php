@@ -44,35 +44,35 @@ class PageImage extends DataObject {
 	
 	function LargeImage() {
 		if($this->Image()) {
-			if($this->Image()->Landscape()) {
-				return $this->Image()->SetWidth(1280);	
-			}
-			else {
-				return $this->Image()->SetHeight(1024);	
-			}
+			// if($this->Image()->Landscape()) {
+				return $this->Image()->CropppedImage(1280,320);	
+			// }
+			// else {
+			// 	return $this->Image()->SetHeight(1024);	
+			// }
 		}
 	}
 	
 	function MediumImage() {
-		if($this->Image()) {
-			if($this->Image()->Landscape()) {
-				return $this->Image()->SetWidth(840);	
-			}
-			else {
-				return $this->Image()->SetHeight(680);	
-			}
-		}
+		// if($this->Image()) {
+		// 	if($this->Image()->Landscape()) {
+				return $this->Image()->CroppedImage(840,280);	
+		// 	}
+		// 	else {
+		// 		return $this->Image()->SetHeight(680);	
+		// 	}
+		// }
 	}
 	
 	function SmallImage() {
-		if($this->Image()) {
-			if($this->Image()->Landscape()) {
-				return $this->Image()->SetWidth(840);	
-			}
-			else {
-				return $this->Image()->SetHeight(680);	
-			}
-		}
+		// if($this->Image()) {
+		// 	if($this->Image()->Landscape()) {
+				return $this->Image()->SetWidth(780,260);	
+		// 	}
+		// 	else {
+		// 		return $this->Image()->SetHeight(680);	
+		// 	}
+		// }
 	}
 	
 	function Square($width = 400) {

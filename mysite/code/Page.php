@@ -115,6 +115,10 @@ class Page_Controller extends ContentController {
 		Requirements::clear('jsparty/prototype.js');
 		parent::init();
 	}
+
+	public function ImageCount() {
+		return $this->Images()->count();
+	}
 	    
 //	public function Breadcrumbs($maxDepth = 20, $unlinked = false, $stopAtPageType = false, $showHidden = false) {
 //			$page = $this;
