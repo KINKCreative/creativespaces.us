@@ -1,3 +1,4 @@
+<% if HideMainContent==0 %>
 <div class="main typography" role="main">
 	<div class="row">
 
@@ -18,3 +19,4 @@
 
 	</div>
 </div>
+<% end_if %>

@@ -3,7 +3,8 @@ class Page extends SiteTree {
 	
 	private static $db = array(
 		'CustomHtml' => 'Text',
-		'Summary' => 'Varchar(500)'
+		'Summary' => 'Varchar(500)',
+		'HideMainContent' => 'Boolean'
 	);
 	
 	private static $has_one = array(
@@ -50,6 +51,16 @@ class Page extends SiteTree {
 	 	$fields->addFieldToTab("Root.Sections", $sectionManager);
 	 	
 		return $fields;
+	}
+
+	function getSettingsFields() {
+	    $fields = parent::getSettingsFields();
+	    $customSettings = new FieldGroup(
+	    	new CheckboxField('HideMainContent')
+	    );
+	    $customSettings->setTitle("Admin settings");
+	    $fields->addFieldToTab("Root.Settings",$customSettings);
+	    return $fields;
 	}
 	
 	public function onBeforeWrite () {
