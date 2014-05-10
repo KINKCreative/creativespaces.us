@@ -13,6 +13,7 @@
 									<% if Image %><img src="$Image.CroppedImage(600,337).URL" class="th" /><% end_if %>
 									<% if Title %><h3>$Title</h3><% end_if %>
 									<% if Content %><p>$Content.Summary(20)<% end_if %>
+									<a href="$Link" title="View $Title.XML" class="button round">Read more</a>
 								</li>
 								<% end_loop %>
 							</div>
