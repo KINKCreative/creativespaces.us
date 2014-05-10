@@ -1,0 +1,17 @@
+@import url(http://fonts.googleapis.com/css?family=Rock+Salt);
+$header-font-family: "Rock Salt", "Helvetica", Helvetica, Arial, sans-serif;
+
+@import "../../foundation/scss/style";
+
+// Grid
+// $row-width: rem-calc(1000);
+// $column-gutter: rem-calc(30);
+// $total-columns: 12;
+
+// Default Colors
+// $primary-color: #008CBA;
+$primary-color: #67b4ff;
+// $secondary-color: #e7e7e7;
+$alert-color: #bd240d;
+$success-color: #afc908;
+$warning-color: #ffb515;

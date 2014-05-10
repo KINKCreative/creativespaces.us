@@ -30,3 +30,6 @@ SiteConfig:
     
 Director:
   environment_type: 'dev'
+
+AssetAdmin:
+  treats_subsite_0_as_global: false
