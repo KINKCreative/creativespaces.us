@@ -1,3 +1,11 @@
+$default-text-shadow-color: rgba(black, 0.6);
+$default-text-shadow-blur: 4px;
+$default-text-shadow-v-offset: 1px;
+$default-text-shadow-h-offset: 0px;
+
+
+@import "compass/css3/text-shadow";
+
 /*// Grid
 // $row-width: rem-calc(1000);
 // $column-gutter: rem-calc(30);
@@ -53,17 +61,15 @@ section.pageSection {
 section, div {
 	&.dark-grey {
 		background: $dark-grey;
-		border-bottom: 1px solid darken($dark-grey, 10%);
 	}
 	&.medium-grey {
 		background: $medium-grey;
-		border-bottom: 1px solid darken($medium-grey, 10%);
 	}
 	&.black {
 		background: #000000;
-		border-bottom: 1px solid #333333;
 	}
-	&.black, &.dark-grey, &.medium-grey {
+	&.black, &.dark-grey, &.medium-grey, &.has-bg {
+		border-bottom: 1px solid rgba(0,0,0,0.25);
 		h1 {
 			color: #FFFFFF;
 		}
@@ -78,5 +84,21 @@ p, h1, h2, h3, h4, h5 {
 	}
 	&.medium-grey {
 		color: $medium-grey;
+	}
+}
+
+.has-bg { 
+	background-repeat: none;
+	background-attachment: fixed; 
+	background-position: center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+
+	h1, h2, h3, h4, h5, p {
+		@include single-text-shadow;	
 	}
 }

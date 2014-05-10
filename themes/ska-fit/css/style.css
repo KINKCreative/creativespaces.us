@@ -7799,63 +7799,81 @@ th.hide-for-touch {
 }
 
 /* STYLES BEGIN */
-/* line 30, ../../foundation/scss/style.scss */
+/* line 38, ../../foundation/scss/style.scss */
 .main {
   padding-top: 32px;
   min-height: 320px;
 }
 
 /* BASE CLASSES */
-/* line 37, ../../foundation/scss/style.scss */
+/* line 45, ../../foundation/scss/style.scss */
 section.pageSection {
   min-height: 5em;
   padding-bottom: 2rem;
   border-bottom: 1px solid #cacaca;
   background: #e3e3e3;
 }
-/* line 42, ../../foundation/scss/style.scss */
+/* line 50, ../../foundation/scss/style.scss */
 section.pageSection h1, section.pageSection p {
   text-align: center;
 }
-/* line 45, ../../foundation/scss/style.scss */
+/* line 53, ../../foundation/scss/style.scss */
 section.pageSection h1 {
   margin-top: 2rem;
 }
-/* line 46, ../../foundation/scss/style.scss */
+/* line 54, ../../foundation/scss/style.scss */
 section.pageSection p:last-child {
   margin-bottom: 0;
 }
 
 /* COLOR CLASSES */
-/* line 54, ../../foundation/scss/style.scss */
+/* line 62, ../../foundation/scss/style.scss */
 section.dark-grey, div.dark-grey {
   background: #272727;
-  border-bottom: 1px solid #0e0e0e;
 }
-/* line 58, ../../foundation/scss/style.scss */
+/* line 65, ../../foundation/scss/style.scss */
 section.medium-grey, div.medium-grey {
   background: #4e4e4e;
-  border-bottom: 1px solid #353535;
 }
-/* line 62, ../../foundation/scss/style.scss */
+/* line 68, ../../foundation/scss/style.scss */
 section.black, div.black {
   background: #000000;
-  border-bottom: 1px solid #333333;
 }
-/* line 67, ../../foundation/scss/style.scss */
-section.black h1, section.dark-grey h1, section.medium-grey h1, div.black h1, div.dark-grey h1, div.medium-grey h1 {
+/* line 71, ../../foundation/scss/style.scss */
+section.black, section.dark-grey, section.medium-grey, section.has-bg, div.black, div.dark-grey, div.medium-grey, div.has-bg {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+/* line 73, ../../foundation/scss/style.scss */
+section.black h1, section.dark-grey h1, section.medium-grey h1, section.has-bg h1, div.black h1, div.dark-grey h1, div.medium-grey h1, div.has-bg h1 {
   color: #FFFFFF;
 }
-/* line 70, ../../foundation/scss/style.scss */
-section.black p, section.dark-grey p, section.medium-grey p, div.black p, div.dark-grey p, div.medium-grey p {
+/* line 76, ../../foundation/scss/style.scss */
+section.black p, section.dark-grey p, section.medium-grey p, section.has-bg p, div.black p, div.dark-grey p, div.medium-grey p, div.has-bg p {
   color: rgba(255, 255, 255, 0.75);
 }
 
-/* line 76, ../../foundation/scss/style.scss */
+/* line 82, ../../foundation/scss/style.scss */
 p.dark-grey, h1.dark-grey, h2.dark-grey, h3.dark-grey, h4.dark-grey, h5.dark-grey {
   color: #272727;
 }
-/* line 79, ../../foundation/scss/style.scss */
+/* line 85, ../../foundation/scss/style.scss */
 p.medium-grey, h1.medium-grey, h2.medium-grey, h3.medium-grey, h4.medium-grey, h5.medium-grey {
   color: #4e4e4e;
+}
+
+/* line 90, ../../foundation/scss/style.scss */
+.has-bg {
+  background-repeat: none;
+  background-attachment: fixed;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+}
+/* line 101, ../../foundation/scss/style.scss */
+.has-bg h1, .has-bg h2, .has-bg h3, .has-bg h4, .has-bg h5, .has-bg p {
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6);
 }

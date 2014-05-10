@@ -23,6 +23,10 @@ Project:
 Image:
   extensions:
     - GrayscaleDecorator
+
+SiteConfig:
+  extensions:
+    - SiteConfigDecorator
     
 Director:
   environment_type: 'dev'
