@@ -6,7 +6,17 @@
 					<% if Title %><h1>$Title</h1><% end_if %>
 					<% if Content %><p>$Content</p><% end_if %>
 					<% if DisplayPage %>
-
+						<% with DisplayPage %>
+							<ul class="large-block-grid-{$MaxColumns} blockgrid">
+								<% loop Children %>
+								<li>
+									<% if Image %>$Image.SetWidth(600)<% end_if %>
+									<% if Title %><h3>$Title</h3><% end_if %>
+									<% if Content %><p>$Content.Summary(20)<% end_if %>
+								</li>
+								<% end_loop %>
+							</div>
+						<% end_with %>
 					<% end_if %>
 				</div>
 			</div>

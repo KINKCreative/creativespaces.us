@@ -7844,12 +7844,12 @@ section.black, section.dark-grey, section.medium-grey, section.has-bg, div.black
   border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 /* line 73, ../../foundation/scss/style.scss */
-section.black h1, section.dark-grey h1, section.medium-grey h1, section.has-bg h1, div.black h1, div.dark-grey h1, div.medium-grey h1, div.has-bg h1 {
+section.black h1, section.black h2, section.black h3, section.black h4, section.black h5, section.dark-grey h1, section.dark-grey h2, section.dark-grey h3, section.dark-grey h4, section.dark-grey h5, section.medium-grey h1, section.medium-grey h2, section.medium-grey h3, section.medium-grey h4, section.medium-grey h5, section.has-bg h1, section.has-bg h2, section.has-bg h3, section.has-bg h4, section.has-bg h5, div.black h1, div.black h2, div.black h3, div.black h4, div.black h5, div.dark-grey h1, div.dark-grey h2, div.dark-grey h3, div.dark-grey h4, div.dark-grey h5, div.medium-grey h1, div.medium-grey h2, div.medium-grey h3, div.medium-grey h4, div.medium-grey h5, div.has-bg h1, div.has-bg h2, div.has-bg h3, div.has-bg h4, div.has-bg h5 {
   color: #FFFFFF;
 }
 /* line 76, ../../foundation/scss/style.scss */
 section.black p, section.dark-grey p, section.medium-grey p, section.has-bg p, div.black p, div.dark-grey p, div.medium-grey p, div.has-bg p {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* line 82, ../../foundation/scss/style.scss */
@@ -7876,4 +7876,9 @@ p.medium-grey, h1.medium-grey, h2.medium-grey, h3.medium-grey, h4.medium-grey, h
 /* line 101, ../../foundation/scss/style.scss */
 .has-bg h1, .has-bg h2, .has-bg h3, .has-bg h4, .has-bg h5, .has-bg p {
   text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* line 107, ../../foundation/scss/style.scss */
+.blockgrid li {
+  text-align: center;
 }

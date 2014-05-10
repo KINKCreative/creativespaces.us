@@ -65,6 +65,15 @@ class Page extends SiteTree {
 	}
 	
 	static $api_access = true;
+
+	public function MaxColumns() {
+		$count = $this->Children()->count();
+		$ccount = ($count>0) ? $count : 3;
+		if($ccount > 4) {
+			$ccount = 4;
+		}
+		return $ccount;
+	}
 		
 }
 class Page_Controller extends ContentController {
