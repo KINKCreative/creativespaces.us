@@ -27,6 +27,8 @@
 		</div>
 	</header>
 
+	<% include Images %>
+	
 	<% include Sections %>
 
 	$Layout
