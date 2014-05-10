@@ -11,7 +11,8 @@ class Page extends SiteTree {
 	);
 	
 	private static $has_many = array(
-		'Images' => 'PageImage'
+		'Images' => 'PageImage',
+		'Sections' => 'PageSection'
 	);
 	
 	function getCMSFields() {
@@ -32,6 +33,10 @@ class Page extends SiteTree {
 		
 		$imageField = UploadField::create('Image','Choose main image')->setAllowedFileCategories('image');
 		$imageField->setFolderName("images"); 
+
+	 	$sectionConfig = GridFieldConfig_RecordEditor::create(); 
+		$sectionConfig->addComponent(new GridFieldSortableRows('SortOrder'));    
+		$sectionManager = new GridField("Sections", "Sections", $this->Sections()->sort("SortOrder"), $sectionConfig);
 		
 		$fields->addFieldToTab("Root.Images",new HeaderField("ImageNote","Main image",3));
 		$fields->addFieldToTab("Root.Images",$imageField);
@@ -41,6 +46,8 @@ class Page extends SiteTree {
 	 	
 	 	$fields->addFieldToTab("Root.Main", new TextareaField("Summary","Enter summary"));
 	 	$fields->addFieldToTab("Root.Main", new TextareaField("CustomHtml","Custom HTML code",4));
+
+	 	$fields->addFieldToTab("Root.Sections", $sectionManager);
 	 	
 		return $fields;
 	}
