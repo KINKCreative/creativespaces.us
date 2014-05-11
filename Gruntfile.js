@@ -11,7 +11,7 @@ module.exports = function(grunt) {
     hub: {
       all: {
         src: ['themes/*/Gruntfile.js'],
-        tasks: ['watch','compass','uglify'],
+        tasks: ['default'],
       },
     },
   });
