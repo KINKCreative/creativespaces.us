@@ -7,7 +7,7 @@
 			<% loop Images %>
 			<li>
 				<% if Link %><a href="$Link"><% end_if %>
-				<img src="$Image.CroppedFromTopImage(800,450).URL" alt="<% if Caption %>$Caption<% else %>Image-$Pos<% end_if %>" data-interchange="[$Image.CroppedFromTopImage(800,450).URL, (default)], [$Image.CroppedFromTopImage(1000,562).URL, (small)], [$Image.CroppedFromTopImage(1200,675).URL, (medium)]"/>
+				<img src="$Image.CroppedImage(800,450).URL" alt="<% if Caption %>$Caption<% else %>Image-$Pos<% end_if %>" data-interchange="[$Image.CroppedImage(800,450).URL, (default)], [$Image.CroppedImage(1000,562).URL, (small)], [$Image.CroppedImage(1200,675).URL, (medium)]"/>
 				<% if Link %></a><% end_if %>
 				<% if Caption %><div class="orbit-caption">$Caption</div><% end_if %>
 		  	</li>
