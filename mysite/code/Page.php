@@ -18,13 +18,6 @@ class Page extends SiteTree {
 	
 	function getCMSFields() {
 	    $fields = parent::getCMSFields();
-
-	 	if(!Permission::check('ADMIN')){ 
-	 		$fields->removeByName(_t('SiteTree.TABTODO')); 
-	 		$fields->removeByName(_t('SiteTree.TABBEHAVIOUR'));
-	 		$fields->removeByName('Access');
-	 		$fields->removeByName('Google Sitemap');
-	 	}
 	 	
 	 	$gridFieldConfig = GridFieldConfig_RecordEditor::create(); 
 		$gridFieldConfig->addComponent(new GridFieldBulkManager());
@@ -49,6 +42,14 @@ class Page extends SiteTree {
 	 	$fields->addFieldToTab("Root.Main", new TextareaField("CustomHtml","Custom HTML code",4));
 
 	 	$fields->addFieldToTab("Root.Sections", $sectionManager);
+
+	 	if(!Permission::check('ADMIN')){ 
+	 		$fields->removeByName(_t('SiteTree.TABTODO')); 
+	 		$fields->removeByName(_t('SiteTree.TABBEHAVIOUR'));
+	 		$fields->removeByName('Access');
+	 		$fields->removeByName('Google Sitemap');
+	 		$imageField->setCanAttachExisting(false);
+	 	}
 	 	
 		return $fields;
 	}

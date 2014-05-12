@@ -18,16 +18,21 @@ class PageImage extends DataObject {
 		return $this->Title || $this->Caption;
 	}
 	
-//	function getCMSFields_forPopup() {
-//
-//		$myField = new ImageUploadField('Image','Select image');
-//		$myField->setUploadFolder("images/pages");
-//		return new FieldSet(
-//			new TextField('Caption'),
-//			new TextField("Link"),
-//			$myField
-//		);
-//	}
+	function getCMSFields() {
+
+		$myField = new UploadField('Image','Select image');
+		$myField->setFolderName("images/pages");
+		if(!Permission::check("ADMIN")) {
+			$myField->setCanAttachExisting(false);
+		}
+
+		return new FieldList(
+			new TextField("Title"),
+			new TextField('Caption'),
+			new TextField("Link"),
+			$myField
+		);
+	}
 		
 	function canDelete($member = NULL) { 
 		return Permission::check('CMS_ACCESS_CMSMain'); 
