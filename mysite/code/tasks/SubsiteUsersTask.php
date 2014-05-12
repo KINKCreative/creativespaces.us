@@ -23,7 +23,7 @@ class SubsiteUsersTask extends BuildTask {
                     $newGroup->Subsites()->add($s->ID);
                     $newGroup->Roles()->add(1);
 
-        			echo("Added new group for '".$s->$Title."'.<br/>");
+        			echo("Added new group for '".$s->Title."'.<br/>");
 
                     $newMember = Member::create();
                     $name = implode("",explode(".",$s->getPrimaryDomain()));
