@@ -26,8 +26,6 @@
 			<% include TopBar %>
 		</div>
 	</header>
-
-	<% include Images %>
 	
 	<% include Sections %>
 

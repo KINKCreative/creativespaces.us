@@ -34,7 +34,8 @@ module.exports = function(grunt) {
 					'js/min/app.min.js': [
 						'../../js/foundation/bower_components/modernizr/modernizr.js',
 						'../../js/foundation/bower_components/jquery/dist/jquery.min.js', 
-						'../../js/foundation/bower_components/foundation/js/foundation.min.js',
+						'../../js/foundation/bower_components/foundation/js/foundation.js',
+						'../../js/foundation/bower_components/foundation/js/foundation/foundation.orbit.js',
 						'js/src/main.js'
 					]
 				}

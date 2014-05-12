@@ -7,6 +7,7 @@
 				<h2>$Title</h2>
 				$Content
 				$Form
+				<% include Images %>
 			</article>
 		</div>
 		<% if $Children || $Parent %><%--Determine if Side Nav should be rendered, you can change this logic--%>

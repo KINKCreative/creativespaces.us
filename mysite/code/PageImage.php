@@ -4,6 +4,7 @@ class PageImage extends DataObject {
 	
 	private static $db = array(
 		'Title' => 'Varchar(255)',
+		'Caption' => 'Varchar(255)',
 		'Link' => 'Varchar(255)',
 		'SortOrder' => 'Int'
 	);
@@ -12,6 +13,10 @@ class PageImage extends DataObject {
 		'Page' => 'Page',
 		'Image' => 'Image'
 	);
+
+	function Caption() {
+		return $this->Title || $this->Caption;
+	}
 	
 //	function getCMSFields_forPopup() {
 //
