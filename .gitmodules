@@ -34,3 +34,6 @@
 [submodule "subsites"]
 	path = subsites
 	url = https://github.com/silverstripe/silverstripe-subsites
+[submodule "focuspoint"]
+	path = focuspoint
+	url = https://github.com/jonom/silverstripe-focuspoint
