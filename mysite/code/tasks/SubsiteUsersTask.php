@@ -11,20 +11,19 @@ class SubsiteUsersTask extends BuildTask {
     function run($request) {
     	$subsites = Subsite::get();
         foreach($subsites as $s) {
-        	if($s->ID>0) {
+            echo("Checking subsite ".$s->Title);
+        	if($s->ID > 0) {
         		$group = Group::get()->where("Title = '".$s->Title."'");
-        		if(!$group) {
+        		if(!$group->First()) {
         			$newGroup = Group::create();
         			$newGroup->Title = $s->Title;
         			$newGroup->AccessAllSubsites = 0;
         			$newGroup->write();
 
-                    $role = PermissionRole::get()->where("ID = 1");
+                    $newGroup->Subsites()->add($s->ID);
+                    $newGroup->Roles()->add(1);
 
-                    $newGroup->Subsites()->add($s);
-                    $newGroup->Roles()->add($role);
-
-        			echo("Added new group for '$Title'.<br/>");
+        			echo("Added new group for '".$s->$Title."'.<br/>");
 
                     $newMember = Member::create();
                     $name = implode("",explode(".",$s->getPrimaryDomain()));
@@ -38,6 +37,9 @@ class SubsiteUsersTask extends BuildTask {
                     $newMember->Groups()->add($newGroup);
         			
         		}
+                else {
+                    echo("Group already exists.");
+                }
         	}
         }
     }
