@@ -11,7 +11,7 @@ class SubsiteUsersTask extends BuildTask {
     function run($request) {
     	$subsites = Subsite::get();
         foreach($subsites as $s) {
-            echo("Checking subsite ".$s->Title);
+            // echo("Checking subsite ".$s->Title);
         	if($s->ID > 0) {
         		$group = Group::get()->where("Title = '".$s->Title."'");
         		if(!$group->First()) {
@@ -32,7 +32,7 @@ class SubsiteUsersTask extends BuildTask {
                     $newMember->SetPassword = "admin1234";
                     $newMember->write();
 
-                    echo("Added new member $name for '$Title'");
+                    echo("Added new member $name for '".$s->Title."'");
                     
                     $newMember->Groups()->add($newGroup);
         			
