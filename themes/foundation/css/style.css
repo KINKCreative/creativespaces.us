@@ -7797,8 +7797,7 @@ p.medium-grey, h1.medium-grey, h2.medium-grey, h3.medium-grey, h4.medium-grey, h
 
 /* line 90, ../scss/style.scss */
 .has-bg {
-  background-attachment: fixed;
-  background-repeat: none;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
   background-size: 100% 100%;
@@ -7809,12 +7808,12 @@ p.medium-grey, h1.medium-grey, h2.medium-grey, h3.medium-grey, h4.medium-grey, h
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
 }
-/* line 103, ../scss/style.scss */
+/* line 102, ../scss/style.scss */
 .has-bg h1, .has-bg h2, .has-bg h3, .has-bg h4, .has-bg h5, .has-bg p {
   text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* line 109, ../scss/style.scss */
+/* line 108, ../scss/style.scss */
 .blockgrid li {
   text-align: center;
 }
