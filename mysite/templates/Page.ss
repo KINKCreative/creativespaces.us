@@ -26,10 +26,6 @@
 			<% include TopBar %>
 		</div>
 	</header>
-	
-	<% include Sections %>
-
-	$Layout
 
 	<nav role="navigation">
 		<div class="row">
@@ -38,6 +34,11 @@
 			</div>
 		</div>
 	</nav>
+	
+	<% include Sections %>
+
+	$Layout
+
 
 	<footer class="footer" role="contentinfo">
 		<div class="row">
