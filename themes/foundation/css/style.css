@@ -7798,9 +7798,9 @@ p.medium-grey, h1.medium-grey, h2.medium-grey, h3.medium-grey, h4.medium-grey, h
 /* line 90, ../scss/style.scss */
 .has-bg {
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: 100% 100%;
+  background-attachment: fixed !important;
+  background-position: center center !important;
+  background-size: auto 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
