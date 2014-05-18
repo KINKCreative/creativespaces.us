@@ -31,7 +31,7 @@ public function GreyPaddedImage($width, $height) {
 }
 
 public function generateGreyPaddedImage(GD $gd, $width, $height) {
-  return $gd->paddedResize($width, $height, '222222');
+  return $gd->paddedResize($width, $height, '333333');
 } 
 
 /*

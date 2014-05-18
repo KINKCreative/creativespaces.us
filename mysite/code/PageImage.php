@@ -90,6 +90,15 @@ class PageImage extends DataObject {
 			return $this->Image()->croppedImage($width,$width);
 		}
 	}
+
+	function Landscape() {
+	    return $this->Image()->getWidth() > $this->Image()->getHeight();
+	}
+ 
+	function Portrait() {
+	    return $this->Image()->getWidth() < $this->Image()->getHeight();
+	}
+
 	
 }
 
