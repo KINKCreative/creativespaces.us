@@ -1,4 +1,6 @@
 /* Default Colors */
+/*$primary-color: #67b4ff;
+$secondary-color: #e7e7e7;*/
 /* $alert-color: #f04124;
    $success-color: #43AC6A;
    $warning-color: #f08a24;
@@ -1533,9 +1535,9 @@ select {
   position: relative;
   padding: 0.875rem 1.5rem 0.875rem 0.875rem;
   font-size: 0.8125rem;
-  background-color: #67b4ff;
-  border-color: #359bff;
-  color: #4f4f4f;
+  background-color: #008cba;
+  border-color: #0078a0;
+  color: white;
 }
 /* line 105, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_alert-boxes.scss */
 .alert-box .close {
@@ -2154,7 +2156,7 @@ select {
 .breadcrumbs > * a,
 .breadcrumbs > * span {
   text-transform: uppercase;
-  color: #67b4ff;
+  color: #008cba;
 }
 /* line 71, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_breadcrumbs.scss */
 .breadcrumbs > *.current {
@@ -2218,9 +2220,9 @@ button, .button {
   padding-left: 2rem;
   font-size: 1rem;
   /*     @else                            { font-size: $padding - rem-calc(2); } */
-  background-color: #67b4ff;
-  border-color: #1f91ff;
-  color: #333333;
+  background-color: #008cba;
+  border-color: #007095;
+  color: white;
   -webkit-transition: background-color 300ms ease-out;
   -moz-transition: background-color 300ms ease-out;
   transition: background-color 300ms ease-out;
@@ -2232,11 +2234,11 @@ button, .button {
 }
 /* line 144, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 button:hover, button:focus, .button:hover, .button:focus {
-  background-color: #1f91ff;
+  background-color: #007095;
 }
-/* line 150, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
+/* line 155, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 button:hover, button:focus, .button:hover, .button:focus {
-  color: #333333;
+  color: white;
 }
 /* line 207, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.secondary, .button.secondary {
@@ -2335,9 +2337,9 @@ button.round, .button.round {
 }
 /* line 222, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled, button[disabled], .button.disabled, .button[disabled] {
-  background-color: #67b4ff;
-  border-color: #1f91ff;
-  color: #333333;
+  background-color: #008cba;
+  border-color: #007095;
+  color: white;
   cursor: default;
   opacity: 0.7;
   -webkit-box-shadow: none;
@@ -2345,15 +2347,15 @@ button.disabled, button[disabled], .button.disabled, .button[disabled] {
 }
 /* line 144, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: #1f91ff;
+  background-color: #007095;
 }
-/* line 150, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
+/* line 155, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  color: #333333;
+  color: white;
 }
 /* line 168, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
-  background-color: #67b4ff;
+  background-color: #008cba;
 }
 /* line 223, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_buttons.scss */
 button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
@@ -3867,8 +3869,8 @@ kbd {
   margin-bottom: inherit;
   padding: 0.25rem 0.5rem 0.375rem;
   font-size: 0.6875rem;
-  background-color: #67b4ff;
-  color: #333333;
+  background-color: #008cba;
+  color: white;
 }
 /* line 92, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_labels.scss */
 .label.radius {
@@ -4305,14 +4307,14 @@ ul.pagination li.unavailable:hover a, ul.pagination li.unavailable a:focus {
 }
 /* line 60, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_pagination.scss */
 ul.pagination li.current a {
-  background: #67b4ff;
+  background: #008cba;
   color: white;
   font-weight: bold;
   cursor: default;
 }
 /* line 67, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_pagination.scss */
 ul.pagination li.current a:hover, ul.pagination li.current a:focus {
-  background: #67b4ff;
+  background: #008cba;
 }
 /* line 119, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_pagination.scss */
 ul.pagination li {
@@ -4366,10 +4368,10 @@ ul.pagination li {
 .panel.callout {
   border-style: solid;
   border-width: 1px;
-  border-color: #bfdfff;
+  border-color: #b6edff;
   margin-bottom: 1.25rem;
   padding: 1.25rem;
-  background: #f6fbff;
+  background: #ecfaff;
 }
 /* line 48, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_panels.scss */
 .panel.callout > :first-child {
@@ -4394,7 +4396,7 @@ ul.pagination li {
 }
 /* line 74, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_panels.scss */
 .panel.callout a {
-  color: #67b4ff;
+  color: #008cba;
 }
 /* line 79, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_panels.scss */
 .panel.radius {
@@ -4473,7 +4475,7 @@ ul.pagination li {
 }
 /* line 57, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_progress-bars.scss */
 .progress .meter {
-  background: #67b4ff;
+  background: #008cba;
   height: 100%;
   display: block;
 }
@@ -4633,15 +4635,15 @@ dialog[open] {
 /* line 61, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_side-nav.scss */
 .side-nav li a:not(.button) {
   display: block;
-  color: #67b4ff;
+  color: #008cba;
 }
 /* line 65, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_side-nav.scss */
 .side-nav li a:not(.button):hover, .side-nav li a:not(.button):focus {
-  color: #95caff;
+  color: #1cc7ff;
 }
 /* line 68, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_side-nav.scss */
 .side-nav li.active > a:first-child:not(.button) {
-  color: #95caff;
+  color: #1cc7ff;
   font-weight: normal;
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 }
@@ -4838,7 +4840,7 @@ dialog[open] {
   -webkit-border-radius: 3px;
   border-radius: 3px;
   font-weight: normal;
-  background: #67b4ff;
+  background: #008cba;
   padding: 0.1875rem 1rem;
   cursor: default;
   color: white;
@@ -4847,7 +4849,7 @@ dialog[open] {
 .sub-nav dt.active a:hover,
 .sub-nav dd.active a:hover,
 .sub-nav li.active a:hover {
-  background: #359bff;
+  background: #0078a0;
 }
 
 /* line 289, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_switch.scss */
@@ -5264,8 +5266,8 @@ table tfoot tr td {
 }
 /* line 50, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_thumbs.scss */
 .th:hover, .th:focus {
-  -webkit-box-shadow: 0 0 6px 1px rgba(103, 180, 255, 0.5);
-  box-shadow: 0 0 6px 1px rgba(103, 180, 255, 0.5);
+  -webkit-box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5);
+  box-shadow: 0 0 6px 1px rgba(0, 140, 186, 0.5);
 }
 /* line 67, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_thumbs.scss */
 .th.radius {
@@ -5283,8 +5285,8 @@ table tfoot tr td {
 }
 /* line 40, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_tooltips.scss */
 .has-tip:hover, .has-tip:focus {
-  border-bottom: dotted 1px #0052a1;
-  color: #67b4ff;
+  border-bottom: dotted 1px #003f54;
+  color: #008cba;
 }
 /* line 46, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_tooltips.scss */
 .has-tip.tip-left, .has-tip.tip-right {
@@ -5333,8 +5335,8 @@ table tfoot tr td {
 }
 /* line 84, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_tooltips.scss */
 .tooltip.opened {
-  color: #67b4ff !important;
-  border-bottom: dotted 1px #0052a1 !important;
+  color: #008cba !important;
+  border-bottom: dotted 1px #003f54 !important;
 }
 
 /* line 90, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_tooltips.scss */
@@ -5589,14 +5591,14 @@ meta.foundation-mq-topbar {
 }
 /* line 300, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button {
-  background: #67b4ff;
+  background: #008cba;
   font-size: 0.8125rem;
   padding-right: 15px;
   padding-left: 15px;
 }
 /* line 305, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button:hover {
-  background: #0684ff;
+  background: #006688;
 }
 /* line 309, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li > a.button.secondary {
@@ -5629,12 +5631,12 @@ meta.foundation-mq-topbar {
 }
 /* line 338, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li.active > a {
-  background: #67b4ff;
+  background: #008cba;
   color: white;
 }
 /* line 341, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_top-bar.scss */
 .top-bar-section ul li.active > a:hover {
-  background: #359bff;
+  background: #0078a0;
   color: white;
 }
 /* line 349, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_top-bar.scss */
@@ -5811,11 +5813,11 @@ meta.foundation-mq-topbar {
     padding: 0 15px;
     line-height: 45px;
     color: white;
-    background: #67b4ff;
+    background: #008cba;
   }
   /* line 484, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar-section li.active:not(.has-form) a:not(.button):hover {
-    background: #359bff;
+    background: #0078a0;
   }
   /* line 493, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .top-bar-section .has-dropdown > a {
@@ -5920,7 +5922,7 @@ meta.foundation-mq-topbar {
   }
   /* line 603, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_top-bar.scss */
   .no-js .top-bar-section ul li:active > a {
-    background: #67b4ff;
+    background: #008cba;
     color: white;
   }
   /* line 611, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_top-bar.scss */
@@ -6186,13 +6188,13 @@ td {
 /* Default Link Styles */
 /* line 230, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_type.scss */
 a {
-  color: #67b4ff;
+  color: #008cba;
   text-decoration: none;
   line-height: inherit;
 }
 /* line 236, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_type.scss */
 a:hover, a:focus {
-  color: #359bff;
+  color: #0078a0;
 }
 /* line 238, ../../../js/foundation/bower_components/foundation/scss/foundation/components/_type.scss */
 a img {
@@ -7800,7 +7802,6 @@ p.medium-grey, h1.medium-grey, h2.medium-grey, h3.medium-grey, h4.medium-grey, h
   background-repeat: no-repeat;
   background-attachment: fixed !important;
   background-position: center center !important;
-  background-size: auto 100%;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -7808,12 +7809,12 @@ p.medium-grey, h1.medium-grey, h2.medium-grey, h3.medium-grey, h4.medium-grey, h
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
 }
-/* line 102, ../scss/style.scss */
+/* line 101, ../scss/style.scss */
 .has-bg h1, .has-bg h2, .has-bg h3, .has-bg h4, .has-bg h5, .has-bg p {
   text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.6);
 }
 
-/* line 108, ../scss/style.scss */
+/* line 107, ../scss/style.scss */
 .blockgrid li {
   text-align: center;
 }

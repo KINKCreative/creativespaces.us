@@ -35,5 +35,9 @@ Profile:
   extensions:
     - SortableDataObject
 
+Quote:
+  extensions:
+    - SortableDataObject
+
 AssetAdmin:
   treats_subsite_0_as_global: false

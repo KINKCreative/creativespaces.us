@@ -13,7 +13,7 @@ class SortableDataObject extends DataExtension
 	
 	public static $summary_fields = array( 
 	   'ID' => 'ID',
-	   'Thumbnail' => 'Thumbnail',
+	   // 'Thumbnail' => 'Thumbnail',
 	   'Title' => 'Title'
 	);
 	
@@ -123,8 +123,8 @@ class SortableDataObject extends DataExtension
 		}
 	}
 	
-	public function getThumbnail() { 
-	   return $this->owner->Image()->CMSThumbnail();
-	}
+	// public function getThumbnail() { 
+	//    return $this->owner->Image()->CMSThumbnail();
+	// }
 
 }
