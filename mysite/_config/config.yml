@@ -31,5 +31,9 @@ SiteConfig:
 Director:
   environment_type: 'dev'
 
+Profile:
+  extensions:
+    - SortableDataObject
+
 AssetAdmin:
   treats_subsite_0_as_global: false
