@@ -22,6 +22,7 @@ class SubsiteUsersTask extends BuildTask {
 
                     $newGroup->Subsites()->add($s->ID);
                     $newGroup->Roles()->add(1);
+                    $newGroup->write();
 
         			echo("Added new group for '".$s->Title."'.<br/>");
 
