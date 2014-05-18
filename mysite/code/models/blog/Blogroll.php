@@ -16,6 +16,21 @@ class Blogroll extends Page implements PermissionProvider {
 //	);
 //		
 //	private static $allowed_children = array("none");
+
+	function getCMSFields() {
+	    $fields = parent::getCMSFields();
+	 	
+	 	$gridFieldConfig = GridFieldConfig_RecordEditor::create(50); 
+		// $gridFieldConfig->addComponent(new GridFieldBulkManager());
+		// $gridFieldConfig->addComponent(new GridFieldBulkImageUpload());   
+		// $gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));    
+	
+		$ArticleManager = new GridField("Articles", "Articles", $this->Articles()->sort("Created"), $gridFieldConfig);
+	 	
+	 	$fields->addFieldToTab("Root.Articles",$ArticleManager);
+	 	
+		return $fields;
+	}
 	
 	function DropdownTitle() {
 		$String = '' . $this->Parent()->Title . ' --- ' . $this->Title;
@@ -33,7 +48,7 @@ class Blogroll_Controller extends Page_Controller {
 
 	private static $allowed_actions = array(
 		'article',
-		'nuevo',
+		'new',
 		'NewArticleForm'
 	);
 

@@ -113,9 +113,9 @@ class Article extends DataObject {
 				$contentTab = new Tab(_t("BlogItem.TABCONTENT", "Content"),
 					$blogrollField,
 					new TextField("Title", $this->fieldLabel('Title')),
-					new HtmlEditorField("Content", "Content",10),
+					new HtmlEditorField("Content", "Content","",10),
 //					$imageField,
-					new TextareaField("VideoEmbed", "Enter Custom Embed Code",5),
+					new TextareaField("VideoEmbed", "Enter Custom Embed Code","",5),
 					new CheckboxField('Featured', "Featured"),
 					$previewField
 				),
