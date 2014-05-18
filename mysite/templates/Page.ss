@@ -27,13 +27,13 @@
 		</div>
 	</header>
 
-	<nav role="navigation">
+	<!-- <nav role="navigation">
 		<div class="row">
 			<div class="large-12 columns">
 				<% include Breadcrumbs %>
 			</div>
 		</div>
-	</nav>
+	</nav> -->
 	
 	<% include Sections %>
 
