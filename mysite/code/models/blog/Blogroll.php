@@ -2,18 +2,20 @@
 
 class Blogroll extends Page implements PermissionProvider {
 
-   	private static $db = array(
-   		'AggregateCategories' => 'Varchar(255)'
-   	);
+//   	private static $db = array(
+//   	);
+//
+//	private static $has_one = array(
+//	);
 	
 	private static $has_many = array(
 		"Articles" => "Article"
 	);
 	
-//	static $defaults = array(
+//	private static $defaults = array(
 //	);
-		
-//	static $allowed_children = array("none");
+//		
+//	private static $allowed_children = array("none");
 	
 	function DropdownTitle() {
 		$String = '' . $this->Parent()->Title . ' --- ' . $this->Title;
@@ -25,21 +27,6 @@ class Blogroll extends Page implements PermissionProvider {
 	      "POST_ARTICLES_FRONTEND" => "Post articles on frontend",
 	    );
 	  }
-	  
-	  public function getCMSFields() {
-	  	$fields = parent::getCMSFields();
-	  	$categories = $this->Categories();
-	  	if($categories) {
-	  		$fields->addFieldToTab("Root.Content.Categories", 
-	  			new CheckboxSetField("AggregateCategories","Gather other categories",$categories->toDropdownMap("ID","Title"))
-	  		);
-	  	}
-	  	return $fields;
-	  }
-	  
-	  public function Categories() {
-	  	return DataObject::get("Blogroll");
-	  }
 }
  
 class Blogroll_Controller extends Page_Controller {
@@ -50,26 +37,9 @@ class Blogroll_Controller extends Page_Controller {
 		'NewArticleForm'
 	);
 
-	public function getBlogroll() {
-		
-		if(!isset($_GET['start']) || !is_numeric($_GET['start']) || (int)$_GET['start'] < 1) 
-	    {
-	        $_GET['start'] = 0;
-	    }
-		
-		$SQL_start = (int)$_GET['start'];
-		
-		$filter = "Published=1 ";
-		if($this->AggregateCategories!="") {
-			$filter.=" AND BlogrollID IN(".$this->AggregateCategories.")";
-		}
-		else {
-			$filter.=" AND BlogrollID=$this->ID";
-		}
-		$blogroll = DataObject::get("Article",$filter,"","","{$SQL_start},10");
-		if($blogroll) {
-			return $blogroll;
-		}
+	public function getBlogroll($sort="") {
+		$blogroll = DataObject::get("Article","Published=1 AND BlogrollID=$this->ID",$sort);
+		return $blogroll ? $blogroll : null;
 	}
 	
 	function article()
@@ -156,13 +126,6 @@ class Blogroll_Controller extends Page_Controller {
 		else {
 			$this->SetMessage('error','No puedes añadir entradas.');
 			Director::redirectBack($this->Link());
-		}
-	}
-	
-	public function FeaturedPost($n=1) {
-		$p = DataObject::get("Article","Featured=1 AND Published=1","Created DESC","",$n);
-		if($p) {
-			return $p;
 		}
 	}
 	

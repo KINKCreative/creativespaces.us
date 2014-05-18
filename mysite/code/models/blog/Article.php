@@ -26,6 +26,7 @@ class Article extends DataObject {
 		
 		private static $summary_fields = array(
 			'Title',
+			'URLSegment'=>"Link",
 			'Blogroll.Title',
 			'Created',
 			'Published' => 'IsPublished',
@@ -38,9 +39,9 @@ class Article extends DataObject {
 			'Published'
 		); 	
 		
-//		static $indexes = array (
-//			'URLSegment' => true
-//		);
+		private static $indexes = array (
+			'URLSegment' => true
+		);
 		
 		private static $default_sort = 'Created DESC';
 		
@@ -49,6 +50,7 @@ class Article extends DataObject {
 		
 		private static $defaults = array(
 			'Title'=>'New article',
+			'URLSegment'=>'new-article',
 			'Published' => 1
 		);
 		
@@ -58,20 +60,28 @@ class Article extends DataObject {
 			//$imageField = new ImageUploadField("Image","Upload image");
 			//$imageField->setUploadFolder("articles/images");
 			
-			$photoManager = new ImageDataObjectManager(
-				$this, // Controller
-				'Images', // Source name
-				'ArticleImage', // Source class
-				'Image', // File name on DataObject
-				array(
-					'Caption' => 'Name'
-				), // Headings 
-				'getCMSFields_forPopup' // Detail fields (function name or FieldSet object)
+//			$photoManager = new ImageDataObjectManager(
+//				$this, // Controller
+//				'Images', // Source name
+//				'ArticleImage', // Source class
+//				'Image', // File name on DataObject
+//				array(
+//					'Caption' => 'Name'
+//				), // Headings 
+//				'getCMSFields_forPopup' // Detail fields (function name or FieldSet object)
 				// Filter clause
 				// Sort clause
 				// Join clause
-			);
-			$photoManager->setUploadFolder("images/posts");
+//			);
+//			$photoManager->setUploadFolder("images/posts");
+
+			$gridFieldConfig = GridFieldConfig_RecordEditor::create(); 
+			$gridFieldConfig->addComponent(new GridFieldBulkManager());
+			$gridFieldConfig->addComponent(new GridFieldBulkImageUpload());   
+			$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));    
+	
+			$photoManager = new GridField("Images", "Article Images", $this->Images()->sort("SortOrder"), $gridFieldConfig);
+
 			
 			if(!$this->ID) {
 				$photoManager = new ReadonlyField("Photos","Photos","Save article to add photos.");
@@ -96,13 +106,12 @@ class Article extends DataObject {
 			$blogrollField = new ReadonlyField("Blogrolls","Blogroll","You need to add at least one Blogroll to select.");
 			$blogroll = DataObject::get("Blogroll","","ParentID ASC");
 			if($blogroll) {
-				$blogrollField = new DropdownField("BlogrollID","Blogroll",$blogroll->toDropdownMap("ID","DropdownTitle","Select one"));
+				$blogrollField = new DropdownField("BlogrollID","Blogroll",$blogroll->map("ID","DropdownTitle","Select one"));
 			}
 			
 			$extraFields = new TabSet ("Root",
 				$contentTab = new Tab(_t("BlogItem.TABCONTENT", "Content"),
 					$blogrollField,
-					$authorField,
 					new TextField("Title", $this->fieldLabel('Title')),
 					new HtmlEditorField("Content", "Content",10),
 //					$imageField,
@@ -117,7 +126,7 @@ class Article extends DataObject {
 				$tabPublish
 			);
 			
-			$f = new FieldSet(
+			$f = new FieldList(
 				$extraFields
 			);
 				
@@ -130,10 +139,10 @@ class Article extends DataObject {
 		}
 		
 		function canCreate($member = NULL) { 
-			return Permission::check('CMS_ACCESS_CMSMain'); 
+			return true; //return Permission::check('CMS_ACCESS_CMSMain'); 
 		}
 		function canEdit($member = NULL) { 
-			return Permission::check('CMS_ACCESS_CMSMain'); 
+			return true; //return Permission::check('CMS_ACCESS_CMSMain'); 
 		}
 		
 		function onBeforeWrite() {
@@ -184,20 +193,23 @@ class Article extends DataObject {
 				return $this->Images()->First()->Image();
 			}
 		}
-		public function Parent() {
-			return $this->Blogroll();
-		}
 		
-		function ThumbnailURL() {
+		function ThumbnailURL($width=300) {
 			if($this->VideoEmbed) {
 				return "http://img.youtube.com/vi/".singleton("Page_Controller")->YouTubeID($this->VideoEmbed)."/0.jpg";
 			}
-			if($this->Images()) {
-				if($i = $this->Images()->First()) {
-					//return $i->Image()->resizeByWidth(200)->URL;
-				}
+			if($this->Images()->Count()>0) {
+				return $this->Images()->First()->Image()->setWidth($width)->URL;
 			}
-			return "http://www.mundotrevi.com/assets/images/MundoTrevi.jpg";
+			return "http://www.placehold.it/300x200&text=No+image";
+		}
+		
+		function getYouTubeID() {
+			$embedcode = $this->VideoEmbed;
+			if($embedcode) {
+				preg_match('/youtube[.]com\/(v|embed)\/([^"?]+)/', $embedcode, $match);
+				return $match[2];
+			}
 		}
 		
 		
