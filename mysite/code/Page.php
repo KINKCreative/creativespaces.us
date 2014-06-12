@@ -86,6 +86,10 @@ class Page extends SiteTree {
 		}
 		return $ccount;
 	}
+
+	public function IncludeLayout() {
+		return $this->renderWith(array("Blank","Page"));
+	}
 		
 }
 class Page_Controller extends ContentController {

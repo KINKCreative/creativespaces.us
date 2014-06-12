@@ -14,8 +14,9 @@ $default-text-shadow-h-offset: 0px;
 // $total-columns: 12;*/
 
 /* Default Colors */
-/*$primary-color: #67b4ff;
-$secondary-color: #e7e7e7;*/
+$primary-color: #27a0cf;
+$secondary-color: #ecd74c;
+
 /* $alert-color: #f04124;
    $success-color: #43AC6A;
    $warning-color: #f08a24;
@@ -24,6 +25,12 @@ $secondary-color: #e7e7e7;*/
 /* PRESETS */
 
 $header-bottom-margin: 1rem;
+$header-font-family: "Source Sans", "Helvetica Neue", _sans;
+$header-font-weight: 200;
+$topbar-link-font-family: $header-font-family;
+$topbar-link-font-size: rem-calc(16);
+$topbar-bg-color: darken($primary-color, 10%);
+$topbar-link-bg-hover: darken($primary-color, 25%);
 
 $bright-blue: #79cae3;
 $light-grey: #e3e3e3;
@@ -109,4 +116,34 @@ p, h1, h2, h3, h4, h5 {
 	li {
 		text-align: center;
 	}
+}
+
+.top-bar {
+	.name h1 a {
+		text-indent: -1000px;;
+		background: url('../images/Pawana-Logo-White-Small.png') no-repeat 10px 5px;
+		background-size: auto 36px;
+		width: 134px;
+	}
+}
+
+section.HomePage {
+	background: darken($primary-color,40%);
+	h1, h2, h3 {
+		color: #FFF;
+	}
+	.maincontent {
+		padding-bottom: 2em;
+		p {
+			text-align: center;
+			padding: 0 10%;
+			font-family: $header-font-family;
+			font-weight: 200;
+			font-size: 1.4em;
+			color: rgba(255,255,255,0.8);
+		}
+	}
+}
+.imagewrap {
+	text-align: center;
 }
