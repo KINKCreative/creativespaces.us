@@ -1,0 +1,112 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:600,200);
+
+$default-text-shadow-color: rgba(black, 0.6);
+$default-text-shadow-blur: 4px;
+$default-text-shadow-v-offset: 1px;
+$default-text-shadow-h-offset: 0px;
+
+
+@import "compass/css3/text-shadow";
+
+/*// Grid
+// $row-width: rem-calc(1000);
+// $column-gutter: rem-calc(30);
+// $total-columns: 12;*/
+
+/* Default Colors */
+/*$primary-color: #67b4ff;
+$secondary-color: #e7e7e7;*/
+/* $alert-color: #f04124;
+   $success-color: #43AC6A;
+   $warning-color: #f08a24;
+   $info-color: #a0d3e8; */
+
+/* PRESETS */
+
+$header-bottom-margin: 1rem;
+
+$bright-blue: #79cae3;
+$light-grey: #e3e3e3;
+$dark-grey: #272727;
+$medium-grey: #4e4e4e;
+
+$section-padding: 2rem;
+
+@import "../../../js/foundation/scss/settings";
+@import "foundation";
+
+/* STYLES BEGIN */
+
+.main {
+	padding-top: 32px;
+	min-height: 320px;
+}
+
+/* BASE CLASSES */
+
+section.pageSection {
+	min-height: 5em;
+	padding-bottom: $section-padding;
+	border-bottom: 1px solid darken($light-grey, 10%);
+	background: $light-grey;
+	h1, p {
+		text-align: center;
+	}
+	h1 { margin-top: $section-padding; }	
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+/* COLOR CLASSES */
+
+section, div {
+	&.dark-grey {
+		background: $dark-grey;
+	}
+	&.medium-grey {
+		background: $medium-grey;
+	}
+	&.black {
+		background: #000000;
+	}
+	&.black, &.dark-grey, &.medium-grey, &.has-bg {
+		border-bottom: 1px solid rgba(0,0,0,0.25);
+		h1, h2, h3, h4, h5 {
+			color: #FFFFFF;
+		}
+		p {
+			color: rgba(255,255,255,0.8);
+		}
+	}
+}
+p, h1, h2, h3, h4, h5 {
+	&.dark-grey {
+		color: $dark-grey;
+	}
+	&.medium-grey {
+		color: $medium-grey;
+	}
+}
+
+.has-bg { 
+	background-repeat: no-repeat;
+	background-attachment: fixed !important; 
+	background-position: center center !important;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+
+	h1, h2, h3, h4, h5, p {
+		@include single-text-shadow;	
+	}
+}
+
+.blockgrid {
+	li {
+		text-align: center;
+	}
+}
