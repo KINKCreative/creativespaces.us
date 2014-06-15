@@ -8,7 +8,12 @@ class Profile extends DataObject {
 		'Text' => 'Text',
 		'VideoEmbed' => 'Text',
 		'Email' => 'Varchar(64)',
-		'Phone' => 'Varchar(20)'
+		'Phone' => 'Varchar(20)',
+		'TwitterUsername' => 'Varchar(32)',
+		'InstagramUsername' => 'Varchar(32)',
+		'GooglePlus' => 'Varchar(255)',
+		'Facebook' => 'Varchar(255)',
+		'Website' => 'Varchar(255)'
 	);
 	
 	private static $has_one = array (

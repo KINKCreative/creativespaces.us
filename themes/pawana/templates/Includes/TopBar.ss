@@ -10,7 +10,7 @@
 		<ul class="right">
 			<% loop Menu(1) %>
 			<li class="<% if $LinkingMode == "current" || $LinkingMode == "section" %>active<% end_if %><% if $Children %> has-dropdown<% end_if %>">
-				<a href="#{$URLSegment}" title="Go to the $Title.ATT">$MenuTitle</a>
+				<a href="<% if Top.ClassName=="HomePage" %>#{$URLSegment}<% else %>$Link<% end_if %>" title="Go to the $Title.ATT">$MenuTitle</a>
 				<% if $Children %>
 				<ul class="dropdown">
 					<li><label>$MenuTitle</label></li>

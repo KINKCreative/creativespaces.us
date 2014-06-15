@@ -2,8 +2,8 @@
 
 class ProfilePage extends Page {
 
-   	private static $db = array(
-   	);
+ 	private static $db = array(
+ 	);
 
 	private static $has_one = array(
 	);
@@ -31,7 +31,6 @@ class ProfilePage extends Page {
 	 	
 		return $fields;
 	}
-	
 		
 }
  

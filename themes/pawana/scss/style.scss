@@ -33,11 +33,11 @@ $topbar-bg-color: darken($primary-color, 10%);
 $topbar-link-bg-hover: darken($primary-color, 25%);
 
 $bright-blue: #79cae3;
-$light-grey: #e3e3e3;
+$light-grey: #F5F5F5;
 $dark-grey: #272727;
 $medium-grey: #4e4e4e;
 
-$section-padding: 2rem;
+$section-padding: 2.5rem;
 
 @import "../../../js/foundation/scss/settings";
 @import "foundation";
@@ -45,24 +45,9 @@ $section-padding: 2rem;
 /* STYLES BEGIN */
 
 .main {
-	padding-top: 32px;
-	min-height: 320px;
-}
-
-/* BASE CLASSES */
-
-section.pageSection {
-	min-height: 5em;
+	padding-top: $section-padding;
 	padding-bottom: $section-padding;
-	border-bottom: 1px solid darken($light-grey, 10%);
-	background: $light-grey;
-	h1, p {
-		text-align: center;
-	}
-	h1 { margin-top: $section-padding; }	
-	p:last-child {
-		margin-bottom: 0;
-	}
+	min-height: 320px;
 }
 
 /* COLOR CLASSES */
@@ -112,6 +97,21 @@ p, h1, h2, h3, h4, h5 {
 	}
 }
 
+.imagewrap {
+	text-align: center;
+}
+
+.th.round {
+	border-radius: 1000px;
+	-webkit-border-radius: 1000px;
+	-moz-border-radius: 1000px;
+	img {
+		border-radius: 1000px;
+		-webkit-border-radius: 1000px;
+		-moz-border-radius: 1000px;
+	}
+}
+
 .blockgrid {
 	li {
 		text-align: center;
@@ -127,10 +127,21 @@ p, h1, h2, h3, h4, h5 {
 	}
 }
 
+/* FOOTER */
+
+footer {
+	margin: $section-padding/2 0;
+}
+
+/* SECTIONS */
+
 section.HomePage {
-	background: darken($primary-color,40%);
+	background: $primary-color;
 	h1, h2, h3 {
 		color: #FFF;
+	}
+	a {
+		color: $secondary-color;
 	}
 	.maincontent {
 		padding-bottom: 2em;
@@ -143,7 +154,30 @@ section.HomePage {
 			color: rgba(255,255,255,0.8);
 		}
 	}
+	.mainlogo {
+		max-height: 140px;
+		margin: 3rem 1rem;
+	}
 }
-.imagewrap {
-	text-align: center;
+
+section.pageSection {
+	/*padding-bottom: $section-padding;*/
+	border-bottom: 1px solid darken($light-grey, 10%);
+	/*h1, p {
+		text-align: center;
+	}*/
+	/*h1 { margin-top: $section-padding; }	*/
+	/*p:last-child {
+		margin-bottom: 0;
+	}*/
+	&.ProfilePage {
+		background: $light-grey;
+	}
+}
+
+.profile {
+	.label {
+		font-size: 0.8em;
+		margin: 0;
+	}
 }

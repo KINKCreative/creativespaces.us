@@ -88,7 +88,7 @@ class Page extends SiteTree {
 	}
 
 	public function IncludeLayout() {
-		return $this->renderWith(array("Blank","Page"));
+		return $this->renderWith(array("Blank","Include_".$this->ClassName,$this->ClassName));
 	}
 		
 }
