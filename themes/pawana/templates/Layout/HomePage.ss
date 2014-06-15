@@ -5,7 +5,7 @@
 				<div class="imagewrap">
 						<img src="$ThemeDir/images/Pawana-Logo-White-Large.png" alt="Pawana Camp" class="mainlogo" />
 				</div>
-				<div class="maincontent">$Content</div>
+				<div class="maincontent">$Content $CustomHtml.RAW</div>
 			</div>
 		</div>
 	</div>

@@ -6,6 +6,7 @@
 			<article>
 				<h2>$Title</h2>
 				$Content
+				$CustomHtml.RAW
 				$Form
 				<% include Images %>
 			</article>
