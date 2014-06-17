@@ -44,7 +44,7 @@ class Page extends SiteTree {
 	 	$fields->addFieldToTab("Root.Sections", $sectionManager);
 
 	 	if(!Permission::check('ADMIN')){ 
-	 		$fields->removeByName("Settings");
+	 		// $fields->removeByName("Settings");
 	 		// $fields->removeByName('Access');
 	 		// $fields->removeByName('Google Sitemap');
 	 		$imageField->setCanAttachExisting(false);
