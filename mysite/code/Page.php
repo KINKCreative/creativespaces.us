@@ -45,8 +45,8 @@ class Page extends SiteTree {
 
 	 	if(!Permission::check('ADMIN')){ 
 	 		$fields->removeByName("Settings");
-	 		$fields->removeByName('Access');
-	 		$fields->removeByName('Google Sitemap');
+	 		// $fields->removeByName('Access');
+	 		// $fields->removeByName('Google Sitemap');
 	 		$imageField->setCanAttachExisting(false);
 	 	}
 	 	
