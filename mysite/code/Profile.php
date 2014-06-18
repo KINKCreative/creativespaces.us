@@ -47,6 +47,11 @@ class Profile extends DataObject {
 	function canEdit($member = NULL) { 
 		return Permission::check('CMS_ACCESS_CMSMain'); 
 	}
+
+	function canView($member = NULL) { 
+		return Permission::check('CMS_ACCESS_CMSMain'); 
+	}
+
 	/*	
 	public function Landscape()
 	{
