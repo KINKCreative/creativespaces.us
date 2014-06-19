@@ -7884,3 +7884,17 @@ section.pageSection.ProfilePage {
   font-size: 0.8em;
   margin: 0;
 }
+
+/* line 185, ../scss/style.scss */
+.addthis_toolbox {
+  text-align: center !important;
+  float: none !important;
+}
+/* line 188, ../scss/style.scss */
+.addthis_toolbox a {
+  float: none !important;
+  display: inline-block !important;
+  border-radius: 1000px;
+  -webkit-border-radius: 1000px;
+  -moz-border-radius: 1000px;
+}
