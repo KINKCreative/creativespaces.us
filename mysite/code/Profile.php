@@ -23,7 +23,7 @@ class Profile extends DataObject {
 	
 	private static $default_sort = "SortOrder ASC";
 		
-	function getCMSFields_forPopup() {
+	function getCMSFields() {
 
 		$myField = new ImageUploadField('Image','Select image');
 		$myField->setUploadFolder("images/profiles");
@@ -51,6 +51,12 @@ class Profile extends DataObject {
 	function canView($member = NULL) { 
 		return Permission::check('CMS_ACCESS_CMSMain'); 
 	}
+
+	static $summary_fields = array(
+		"ID",
+		"Title",
+		"Created"
+	);
 
 	/*	
 	public function Landscape()
