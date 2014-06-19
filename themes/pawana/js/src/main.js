@@ -1,7 +1,7 @@
 $(document).foundation();
 
-
-if(faqdata) {
+$(document).ready(function() {
+  if(!typeof(faqdata)==='undefined') {
   faq = $.parseJSON(faqdata);
 
   count=0;
@@ -17,3 +17,4 @@ if(faqdata) {
 
   $(".faq").html('<dl class="accordion" data-accordion>'+nav+'</dl>');
 }
+})
