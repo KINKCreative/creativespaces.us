@@ -4,6 +4,7 @@
 
 		<div class="<% if $Children || $Parent %>large-9 large-push-3<% else %>large-12<% end_if %> columns">
 			<article>
+				<% if Image %>$Image.SetWidth(1000)<% end_if %>
 				<h2>$Title</h2>
 				$Content
 				$CustomHtml.RAW
