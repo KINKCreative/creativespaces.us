@@ -6,8 +6,7 @@
 			<article>
 				<% if Image %>$Image.SetWidth(1000)<% end_if %>
 				<h2>$Title</h2>
-				$Content
-				$CustomHtml.RAW
+				<div class="maincontent">$Content $CustomHtml.RAW</div>
 				$Form
 				<% include Images %>
 			</article>
