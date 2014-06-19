@@ -43,3 +43,7 @@ Quote:
 
 AssetAdmin:
   treats_subsite_0_as_global: false
+
+DateField:
+  default_config:
+    showcalendar: true

@@ -181,3 +181,14 @@ section.pageSection {
 		margin: 0;
 	}
 }
+
+.addthis_toolbox {
+	text-align:center !important;
+	float: none !important;
+	a {
+		float: none !important; display: inline-block !important;
+			border-radius: 1000px;
+			-webkit-border-radius: 1000px;
+			-moz-border-radius: 1000px;
+	}
+}
