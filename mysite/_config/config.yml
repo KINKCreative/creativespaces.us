@@ -47,3 +47,4 @@ AssetAdmin:
 DateField:
   default_config:
     showcalendar: true
+    dmyfields: true;
