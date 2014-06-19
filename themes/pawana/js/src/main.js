@@ -1,20 +1,16 @@
 $(document).foundation();
 
-$(document).ready(function() {
-  if(!typeof(faqdata)==='undefined') {
-  faq = $.parseJSON(faqdata);
-
-  count=0;
-  nav = "";
-  faq.forEach(function(f) {
-      alert(f);
-    count++;
-          active = "";
-          if(count==1) { active = "active"; }
-    fid = "panel"+count;
-    nav += '<dd><a href="#'+fid+'">'+f[0]+'</a><div id="'+fid+'" class="content '+active+'">'+f[1]+'</div></a></dd>';
-  });
-
-  $(".faq").html('<dl class="accordion" data-accordion>'+nav+'</dl>');
-}
-})
+$(document).ready(function(){
+  if($(".faq").length) {
+    count = 1;
+    dd = "";
+    $(".faq h3").each(function() {
+        answer = ($(this).next("p").html());
+        question = $(this).html();
+        dd = dd + '<dd class="accordion-navigation"><a href="#panel'+count+'">'+question+'</a><div id="panel'+count+'" class="content">'+answer+'</div></dd>';
+        count++;
+    });
+    $(".faq").html('<dl class="accordion" data-accordion>'+dd+'</dl>');
+    $(document).foundation('reflow','accordion');
+  }
+});
