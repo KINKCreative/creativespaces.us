@@ -187,8 +187,14 @@ section.pageSection {
 	float: none !important;
 	a {
 		float: none !important; display: inline-block !important;
-			border-radius: 1000px;
-			-webkit-border-radius: 1000px;
-			-moz-border-radius: 1000px;
+		span {
+			-webkit-border-radius: 40px !important;
+			border-radius: 40px !important;
+			-moz-border-radius: 40px !important;
+		}
 	}
+}
+
+.top-bar a.social {
+	padding: 0 0.4em !important;
 }

@@ -7894,7 +7894,15 @@ section.pageSection.ProfilePage {
 .addthis_toolbox a {
   float: none !important;
   display: inline-block !important;
-  border-radius: 1000px;
-  -webkit-border-radius: 1000px;
-  -moz-border-radius: 1000px;
+}
+/* line 190, ../scss/style.scss */
+.addthis_toolbox a span {
+  -webkit-border-radius: 40px !important;
+  border-radius: 40px !important;
+  -moz-border-radius: 40px !important;
+}
+
+/* line 198, ../scss/style.scss */
+.top-bar a.social {
+  padding: 0 0.4em !important;
 }

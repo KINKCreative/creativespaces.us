@@ -18,6 +18,8 @@
 	<link rel="icon" type="image/png" href="$ThemeDir/favicon.ico" />
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<link rel="stylesheet" href="$ThemeDir/css/style.css" />
+	<link rel="stylesheet" href="$ThemeDir/fontello/css/fontello.css">
+  <link rel="stylesheet" href="$ThemeDir/fontello/css/animation.css"><!--[if IE 7]><link rel="stylesheet" href="css/fontello-ie7.css"><![endif]-rel="stylesheet"><![endif]-->
 </head>
 <body class="$ClassName.ATT">
 
@@ -54,6 +56,5 @@
 
 	<%--See [Requirements](http://doc.silverstripe.org/framework/en/reference/requirements) for loading from controller--%>
 	<script src="$ThemeDir/js/min/app.min.js"></script>
-	<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53a2c39c7b8a040a"></script>
 </body>
 </html>
