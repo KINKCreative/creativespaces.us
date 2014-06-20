@@ -33,7 +33,7 @@
 			<% if not $Last %><li class="divider"></li><% end_if %>
 			<% end_loop %>
 			<li class="divider"></li>
-			<li><a href="" target="_blank" class="social"><i class="icon-facebook-circled"></i></a></li>
+			<li><a href="http://www.facebook.com/pawanacamp" target="_blank" class="social"><i class="icon-facebook-circled"></i></a></li>
 			<li><a href="http://www.twitter.com/pawanacamp" target="_blank" class="social"><i class="icon-twitter-circled"></i></a></li>
 			<li><a href="http://www.youtube.com/user/pawanacamp" target="_blank" class="social"><i class="icon-youtube-squared"></i></a></li>
 		</ul>
