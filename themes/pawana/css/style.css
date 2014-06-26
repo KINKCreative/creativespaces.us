@@ -7904,5 +7904,8 @@ section.pageSection.ProfilePage {
 
 /* line 198, ../scss/style.scss */
 .top-bar a.social {
-  padding: 0 0.4em !important;
+  padding: 0 0.1em !important;
+  font-size: 1.5em;
+  font-weight: 300 !important;
+  font-smooth: never;
 }

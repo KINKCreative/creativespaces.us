@@ -25,8 +25,8 @@ class Profile extends DataObject {
 		
 	function getCMSFields() {
 
-		$myField = new ImageUploadField('Image','Select image');
-		$myField->setUploadFolder("images/profiles");
+		$myField = new UploadField('Image','Select image');
+		$myField->setFolderName("images/profiles");
 		
 		return new FieldSet(
 			new TextField('Title'),

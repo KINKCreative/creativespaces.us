@@ -196,5 +196,9 @@ section.pageSection {
 }
 
 .top-bar a.social {
-	padding: 0 0.4em !important;
+	padding: 0 0.1em !important;
+	font-size: 1.5em;
+	font-weight: 300 !important;
+	font-smooth: never;
+	-webkit-font-smoothing : none;
 }
