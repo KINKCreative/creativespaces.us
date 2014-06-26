@@ -24,18 +24,12 @@ class Profile extends DataObject {
 	private static $default_sort = "SortOrder ASC";
 		
 	function getCMSFields() {
+		$fields = parent::getCMSFields();
 
 		$myField = new UploadField('Image','Select image');
 		$myField->setFolderName("images/profiles");
-		
-		return new FieldSet(
-			new TextField('Title'),
-			new TextField('JobPosition'),
-			new TextareaField('Text'),
-			new TextareaField('VideoEmbed'),
-			new TextField('SortOrder'),
-			$myField
-		);
+		$fields->addFieldToTab("Root.Main", $myField);
+		return $fields;
 	}
 		
 	function canDelete($member = NULL) { 
