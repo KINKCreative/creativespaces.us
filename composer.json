@@ -1,0 +1,26 @@
+{
+    "name": "klemen/creativespaces.us",
+    "authors": [
+        {
+            "name": "Klemen",
+            "email": "klemen@kinkcreative.com"
+        }
+    ],
+    "require": {
+      "silverstripe/cms": "3.2.1",
+      "silverstripe/framework": "3.2.1",
+      "silverstripe/siteconfig": "*",
+      "gdmedia/ss-auto-git-ignore": "dev-master",
+      "unclecheese/zen-fields" : "*",
+      "unclecheese/betterbuttons": "1.2.*",
+      "unclecheese/dropzone": "dev-master",
+      "silverstripe/subsites" : "1.1.x-dev",
+      "unclecheese/zen-fields" : "*",
+      "undefinedoffset/sortablegridfield": "dev-master",
+      "jonom/focuspoint": "dev-master"
+    },
+    "scripts": {
+      "post-update-cmd": "GDM\\SSAutoGitIgnore\\UpdateScript::Go"
+    },
+    "gdmedia/ss-auto-git-ignore": "dev-master"
+}

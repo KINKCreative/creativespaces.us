@@ -5,10 +5,10 @@ set :application, 'creativespaces.us'
 set :repo_url, 'https://github.com/KINKCreative/creativespaces.us.git'
 
 
-set :ssh_options, {
-  forward_agent: true,
-  user: 'deploy'
-}
+#set :ssh_options, {
+#  forward_agent: true,
+#  user: 'deploy'
+#}
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
