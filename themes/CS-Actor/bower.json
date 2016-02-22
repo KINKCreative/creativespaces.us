@@ -1,0 +1,10 @@
+{
+  "name": "actor",
+  "version": "0.0.1",
+  "devDependencies": {
+    "jquery": "1.11.1"
+  },
+  "dependencies": {
+    "jquery-smooth-scroll": "~1.6.1"
+  }
+}

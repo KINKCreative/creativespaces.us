@@ -1,0 +1,28 @@
+/**
+ * components/_main.scss
+ */
+
+/* ==========================================================================
+   Imports
+   ========================================================================== */
+
+// @import "";
+
+.jumbotron {
+  position: relative;
+  .jumbotron-overlay {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.7);
+  }
+  .container {
+    z-index: 2;
+  }
+}
+
+h1 {
+  color: #000000;
+}

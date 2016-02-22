@@ -1,0 +1,87 @@
+---
+Name: mysite
+After: 'framework/*','cms/*'
+---
+# YAML configuration for SilverStripe
+# See http://doc.silverstripe.org/framework/en/topics/configuration
+# Caution: Indentation through two spaces, not tabs
+
+LeftAndMain:
+  extra_requirements_css:
+    - app/styles/admin.css
+
+SiteTree:
+  create_default_pages: false
+
+UploadField:
+  extensions:
+    - UploadExtension
+
+Member:
+  extensions:
+    - MemberExtend
+
+Article:
+  extensions:
+    - Linkable
+
+ArticleImage:
+  extensions:
+    - SortableDataObject
+
+Project:
+  extensions:
+    - Linkable
+
+Image:
+  extensions:
+    - GrayscaleDecorator
+
+SiteConfig:
+  extensions:
+    - SiteConfigDecorator
+
+Director:
+  environment_type: 'dev'
+
+Profile:
+  extensions:
+    - SortableDataObject
+
+Quote:
+  extensions:
+    - SortableDataObject
+
+AssetAdmin:
+  treats_subsite_0_as_global: false
+
+DateField:
+  default_config:
+    showcalendar: true
+    dmyfields: true;
+
+Video:
+  extensions:
+    - SortableDataObject
+    - SubsiteDataObject
+
+ColorField:
+  colors:
+    - '#576E75'
+    - '#829496'
+    - '#93A1A1'
+    - '#EEE8D4'
+    - '#FDF6E2'
+    - '#FEFB00'
+    - '#CD4A00'
+    - '#DE3027'
+    - '#D53182'
+    - '#6B6FC7'
+    - '#1C89D5'
+    - '#20A198'
+    - '#859A00'
+
+PageAdmin:
+  extensions:
+    - SubsiteAdminExtension
+

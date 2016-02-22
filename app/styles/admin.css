@@ -1,0 +1,12 @@
+/*
+
+ADMIN STYLE OVERRIDES
+
+*/
+
+
+.widthHeightField,
+#EmbeddedObject_extraclass,
+.fieldholder-small-label[for="EmbeddedObject_extraclass"] {
+  display: none !important;
+}

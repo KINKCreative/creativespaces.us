@@ -1,0 +1,78 @@
+$start: 0;
+$limit: 150;
+$interval: 5;
+
+$real: $limit / $interval;
+
+// Margins
+
+@for $i from 0 through $real {
+  @if(($i * $interval) + $start <= $limit) {
+    .m-#{($i * $interval) + $start} {
+      margin: #{($i * $interval) + $start}px;
+    }
+    .m-t-#{($i * $interval) + $start} {
+      margin-top: #{($i * $interval) + $start}px !important;
+    }
+    .m-b-#{($i * $interval) + $start} {
+      margin-bottom: #{($i * $interval) + $start}px !important;
+    }
+    .m-r-#{($i * $interval) + $start} {
+      margin-right: #{($i * $interval) + $start}px !important;
+    }
+    .m-l-#{($i * $interval) + $start} {
+      margin-left: #{($i * $interval) + $start}px !important;
+    }
+
+    .p-#{($i * $interval) + $start} {
+      padding: #{($i * $interval) + $start}px;
+    }
+    .p-t-#{($i * $interval) + $start} {
+      padding-top: #{($i * $interval) + $start}px !important;
+    }
+    .p-b-#{($i * $interval) + $start} {
+      padding-bottom: #{($i * $interval) + $start}px !important;
+    }
+    .p-r-#{($i * $interval) + $start} {
+      padding-right: #{($i * $interval) + $start}px !important;
+    }
+    .p-l-#{($i * $interval) + $start} {
+      padding-left: #{($i * $interval) + $start}px !important;
+    }
+
+    .m-t--#{($i * $interval) + $start} {
+      margin-top: -#{($i * $interval) + $start}px !important;
+    }
+
+  }
+}
+
+
+.abs {
+  position: absolute !important;
+}
+.abs-b {
+  bottom: 0;
+}
+.abs-t {
+  top: 0;
+}
+
+@media(max-width: 600px) {
+  .p-n-xs {
+    padding: inherit !important;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+.strong {
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.unwrap {
+  white-space: normal;
+  line-height: 1;
+}
