@@ -1,0 +1,39 @@
+a, .navbar-nav li.active a, .nav>li>a:hover, .cbp-l-grid-masonry-projects-title, .nav-tabs-services>li.active>a, .nav-tabs-services>li.active>a:hover, .nav-tabs-services>li.active>a:focus, 
+.tabpanel-title h3, .team-social a, .team-content .team-details h5, .blog-article article p.blog-article-btn, .features-icon span, .info-content .col-sm-3 h1, .footer-social a:hover, 
+.second-footer .col-sm-3 a:hover, .slider-typed span, .header-navbar .header-menu-content ul li p strong, .list-unstyled strong, .header-navbar .header-menu-content ul li a:hover, 
+.local-scroll i.scroll-down-icon, .blog-title a:hover, .blog-category ul li a:hover, .pagination>li>a:hover, .blog-cat-list li a:hover, .blog-tags a:hover, .blog-recent-post-item .media-body a:hover, 
+.tag-widget a:hover{
+	color: #7e7bc0;
+}
+.rk-separator, .cbp-l-loadMore-button .cbp-l-loadMore-button-link, .blog-pagination .pagination>.active>a, #clients-slider .owl-controls .owl-page span, #service-slider .owl-controls .owl-page span{
+	background-color: #7e7bc0;
+}
+.cbp-l-loadMore-button .cbp-l-loadMore-button-link:hover {
+	background-color: #6B68B6;
+}
+.cbp-l-filters-buttonCenter .cbp-filter-item.cbp-filter-item-active, .cbp-l-filters-buttonCenter .cbp-filter-item:hover{
+	color: #7e7bc0;
+	border-bottom: 2px solid #7e7bc0;
+}
+#portfolio-filters-container .cbp-filter-item.cbp-filter-item-active { 
+	border-color: #7e7bc0;
+}
+.footer-second-social a:hover, a:hover, a:focus, .share-widget a:hover{
+	color: #6B68B6;
+}
+
+/* Buttons */
+.btn-pink{
+	background-color: #7e7bc0;
+}
+.btn-pink:hover{
+	background-color: #6B68B6;
+}
+.btn-pink-border {
+	border: 2px solid #7e7bc0;
+}
+.btn-pink-border:hover {
+	background-color: #6B68B6;
+}
+
+
