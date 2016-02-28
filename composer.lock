@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "544a342bc672a24908967c4217714f7e",
+    "hash": "80c63112e97bab7fe205b99c6e796524",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
