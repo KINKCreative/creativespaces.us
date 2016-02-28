@@ -5,7 +5,6 @@ require 'capistrano/setup'
 require 'capistrano/deploy'
 
 require 'capistrano/git'
-require './lib/capistrano/submodule_strategy'
 require 'capistrano/composer'
 
 # Includes tasks from other gems included in your Gemfile
@@ -26,4 +25,4 @@ require 'capistrano/composer'
 # require 'capistrano/rails/migrations'
 
 # Loads custom tasks from `lib/capistrano/tasks' if you have any defined.
-Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }
+# Dir.glob('lib/capistrano/tasks/*.cap').each { |r| import r }
