@@ -5,10 +5,10 @@ set :application, 'creativespaces.us'
 set :repo_url, 'https://github.com/KINKCreative/creativespaces.us.git'
 
 
-#set :ssh_options, {
+# set :ssh_options, {
 #  forward_agent: true,
 #  user: 'deploy'
-#}
+# }
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
@@ -32,13 +32,13 @@ set :log_level, :info
 
 #set :use_sudo, false
 set :use_sudo, true
-set :user, "www-data"
-set :group, "www-data"
+set :user, "deploy"
+set :group, "deploy"
 
-# desc "Change group to www-data"
-# task :chown_to_www-data, :roles => [ :app, :db, :web ] do
-#   sudo "chown -R #{user}:www-data #{deploy_to}"
-# end
+desc "Change group to www-data"
+task :chown_to_www_data do
+  exec "chown -R www-data:www-data #{deploy_to}"
+end
 
 # Default value for :pty is false
 # set :pty, true
@@ -68,6 +68,7 @@ namespace :deploy do
     end
   end
 
+  after :publishing, :chown_to_www_data
   after :publishing, :restart
 
   after :restart, :clear_cache do
