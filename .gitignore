@@ -59,12 +59,15 @@ app.yaml
 /dropzone
 /focuspoint
 /framework
+/gridfield-bulk-editing-tools
 /gridfieldextensions
 /linkable
 /reports
+/segment-field
 /silverstripe-color-field
 /siteconfig
 /sortablegridfield
 /subsites
+/userforms
 /zen_fields
 # END of GitIgnoreEditor
