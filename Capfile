@@ -6,6 +6,7 @@ require 'capistrano/deploy'
 
 require 'capistrano/git'
 require './lib/capistrano/submodule_strategy'
+require 'capistrano/composer'
 
 # Includes tasks from other gems included in your Gemfile
 #
