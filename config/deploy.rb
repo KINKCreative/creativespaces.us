@@ -26,8 +26,6 @@ set :deploy_via, :copy
 # Default value for :log_level is :debug
 # set :log_level, :debug
 
-set :git_strategy, SubmoduleStrategy
-
 set :log_level, :info
 
 #set :use_sudo, false
