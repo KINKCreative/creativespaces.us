@@ -17,12 +17,13 @@
       "silverstripe/subsites" : "1.1.x-dev",
       "unclecheese/zen-fields" : "*",
       "undefinedoffset/sortablegridfield": "dev-master",
-      "jonom/focuspoint": "dev-master",
+      "jonom/focuspoint": "2.0.1",
       "ryanpotter/silverstripe-color-field": "*",
-        "silverstripe-australia/gridfieldextensions": "~1.3",
-        "sheadawson/silverstripe-linkable": "~1.2",
-        "silverstripe/userforms": "~3.1",
-        "colymba/gridfield-bulk-editing-tools": "~2.1"
+      "silverstripe-australia/gridfieldextensions": "~1.3",
+      "sheadawson/silverstripe-linkable": "~1.2",
+      "silverstripe/userforms": "~3.1",
+      "colymba/gridfield-bulk-editing-tools": "~2.1",
+      "silverstripe/googlesitemaps": "~1.4"
     },
     "scripts": {
       "post-update-cmd": "GDM\\SSAutoGitIgnore\\UpdateScript::Go"

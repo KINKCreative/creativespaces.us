@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "952c79f0767b60cd84592112dad167cd",
+    "hash": "544a342bc672a24908967c4217714f7e",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -228,7 +228,7 @@
         },
         {
             "name": "jonom/focuspoint",
-            "version": "dev-master",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jonom/silverstripe-focuspoint.git",
@@ -506,17 +506,54 @@
             "time": "2015-11-16 03:17:10"
         },
         {
-            "name": "silverstripe/reports",
-            "version": "3.2.1",
+            "name": "silverstripe/googlesitemaps",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/silverstripe-labs/silverstripe-reports.git",
-                "reference": "1580db4a9dd3de31417d2181d9d26e11db50dffa"
+                "url": "https://github.com/silverstripe-labs/silverstripe-googlesitemaps.git",
+                "reference": "c549ca4d3fd1c4014494b434f5cf49b792a107c9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe-labs/silverstripe-reports/zipball/1580db4a9dd3de31417d2181d9d26e11db50dffa",
-                "reference": "1580db4a9dd3de31417d2181d9d26e11db50dffa",
+                "url": "https://api.github.com/repos/silverstripe-labs/silverstripe-googlesitemaps/zipball/c549ca4d3fd1c4014494b434f5cf49b792a107c9",
+                "reference": "c549ca4d3fd1c4014494b434f5cf49b792a107c9",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "type": "silverstripe-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Will Rossiter",
+                    "email": "will@fullscreen.io"
+                }
+            ],
+            "description": "SilverStripe support for the Google Sitemaps XML system, enabling Google and other search engines to see all urls on your site. This helps your SilverStripe website rank well in search engines, and to encourage the information on your site to be discovered by Google quickly.",
+            "homepage": "https://github.com/silverstripe-labs/silverstripe-googlesitemaps",
+            "keywords": [
+                "googlesitemaps",
+                "seo",
+                "silverstripe"
+            ],
+            "time": "2015-09-07 08:00:33"
+        },
+        {
+            "name": "silverstripe/reports",
+            "version": "3.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/silverstripe-labs/silverstripe-reports.git",
+                "reference": "af2d51125c4651f27d8fb279e44e8ceb5f2996f9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/silverstripe-labs/silverstripe-reports/zipball/af2d51125c4651f27d8fb279e44e8ceb5f2996f9",
+                "reference": "af2d51125c4651f27d8fb279e44e8ceb5f2996f9",
                 "shasum": ""
             },
             "require": {
@@ -547,7 +584,7 @@
                 "reports",
                 "silverstripe"
             ],
-            "time": "2015-11-10 04:43:37"
+            "time": "2015-12-16 21:00:39"
         },
         {
             "name": "silverstripe/segment-field",
@@ -590,16 +627,16 @@
         },
         {
             "name": "silverstripe/siteconfig",
-            "version": "3.2.1",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/silverstripe/silverstripe-siteconfig.git",
-                "reference": "a13ab435d448fc4334b1333a20b85d223636bb5f"
+                "reference": "3c41aaa7de144022e267df3c2b0c6c928d362ae2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/silverstripe/silverstripe-siteconfig/zipball/a13ab435d448fc4334b1333a20b85d223636bb5f",
-                "reference": "a13ab435d448fc4334b1333a20b85d223636bb5f",
+                "url": "https://api.github.com/repos/silverstripe/silverstripe-siteconfig/zipball/3c41aaa7de144022e267df3c2b0c6c928d362ae2",
+                "reference": "3c41aaa7de144022e267df3c2b0c6c928d362ae2",
                 "shasum": ""
             },
             "require": {
@@ -608,7 +645,7 @@
             "type": "silverstripe-module",
             "extra": {
                 "branch-alias": {
-                    "3.x-dev": "3.2.x-dev"
+                    "3.x-dev": "3.3.x-dev"
                 }
             },
             "autoload": {
@@ -628,7 +665,7 @@
                 "silverstripe",
                 "siteconfig"
             ],
-            "time": "2015-11-16 03:01:52"
+            "time": "2016-02-24 03:06:04"
         },
         {
             "name": "silverstripe/subsites",
@@ -816,12 +853,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/unclecheese/silverstripe-dropzone.git",
-                "reference": "0f5a9bcab98581a5faa7ada2e18e30492c0ff2e3"
+                "reference": "f8c1a4598aaa03b54683b7b70f6ee7ff48f215a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/unclecheese/silverstripe-dropzone/zipball/0f5a9bcab98581a5faa7ada2e18e30492c0ff2e3",
-                "reference": "0f5a9bcab98581a5faa7ada2e18e30492c0ff2e3",
+                "url": "https://api.github.com/repos/unclecheese/silverstripe-dropzone/zipball/f8c1a4598aaa03b54683b7b70f6ee7ff48f215a6",
+                "reference": "f8c1a4598aaa03b54683b7b70f6ee7ff48f215a6",
                 "shasum": ""
             },
             "require": {
@@ -850,7 +887,7 @@
                 "upload",
                 "uploader"
             ],
-            "time": "2016-01-18 02:36:42"
+            "time": "2016-02-10 03:51:28"
         },
         {
             "name": "unclecheese/zen-fields",
@@ -900,12 +937,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/UndefinedOffset/SortableGridField.git",
-                "reference": "1eb946a8a563a0b452368b92bd3c5ffedd016c63"
+                "reference": "8f9201c69664d41ab2a369e500f14e1b8c5f4e1e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/1eb946a8a563a0b452368b92bd3c5ffedd016c63",
-                "reference": "1eb946a8a563a0b452368b92bd3c5ffedd016c63",
+                "url": "https://api.github.com/repos/UndefinedOffset/SortableGridField/zipball/8f9201c69664d41ab2a369e500f14e1b8c5f4e1e",
+                "reference": "8f9201c69664d41ab2a369e500f14e1b8c5f4e1e",
                 "shasum": ""
             },
             "require": {
@@ -932,7 +969,7 @@
                 "gridfield",
                 "silverstripe"
             ],
-            "time": "2016-02-06 21:36:00"
+            "time": "2016-02-13 19:09:25"
         }
     ],
     "packages-dev": [],
@@ -942,8 +979,7 @@
         "gdmedia/ss-auto-git-ignore": 20,
         "unclecheese/dropzone": 20,
         "silverstripe/subsites": 20,
-        "undefinedoffset/sortablegridfield": 20,
-        "jonom/focuspoint": 20
+        "undefinedoffset/sortablegridfield": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
