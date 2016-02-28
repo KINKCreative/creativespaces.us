@@ -6,26 +6,49 @@
             <div class="col-sm-12 text-center">
 
                 <% if SiteConfig.Logo %>
-                  <img src="$SiteConfig.Logo.SetWidth(120)" alt="$SiteConfig.Title - Logo" height="60" width="60">
+                  <img src="$SiteConfig.Logo.SetWidth(300).URL" alt="$SiteConfig.Title - Logo" width="200">
+                  <div class="clearfix"></div>
+                <% else %>
+
+                  <div class="clearfix"></div>
+                  <h2>$SiteConfig.Title</h2>
+
                 <% end_if %>
-
-                <div class="clearfix"></div>
-
-                <h2>$SiteConfig.Title</h2>
                 <%-- <h4>$SiteConfig.Tagline</h4> --%>
                 <% with SiteConfig %>
                 <ul class="footer-social inline-block m-t-30">
-                    <li><a href="$FacebookURL" target="_blank" class="primary-hover"><i class="icon-facebook"></i></a></li>
-                    <li><a href="$TwitterURL"  target="_blank" class="primary-hover"><i class="icon-twitter"></i></a></li>
-                    <%-- <li><a href="$InstagramURL" target="_blank"><i class="icon-instagram"></i></a></li> --%>
-                    <li><a href="$LinkedInURL"  target="_blank" class="primary-hover"><i class="icon-linkedin"></i></a></li>
+                    <% if FacebookURL %>
+                      <li><a href="$FacebookURL" target="_blank" class="primary-hover"><i class="icon-facebook"></i></a></li>
+                    <% end_if %>
+                    <% if TwitterURL %>
+                      <li><a href="$TwitterURL"  target="_blank" class="primary-hover"><i class="icon-twitter"></i></a></li>
+                    <% end_if %>
+                    <% if InstagramURL %>
+                      <li><a href="$InstagramURL" target="_blank"><i class="icon-picture"></i></a></li>
+                    <% end_if %>
+                    <% if LinkedInURL %>
+                      <li><a href="$LinkedInURL"  target="_blank" class="primary-hover"><i class="icon-linkedin"></i></a></li>
+                    <% end_if %>
+                    <% if SoundCloudURL %>
+                      <li><a href="$SoundCloudURL"  target="_blank" class="primary-hover"><i class="icon-mic"></i></a></li>
+                    <% end_if %>
+                    <% if $VimeoURL %>
+                      <li><a href="$VimeoURL"  target="_blank" class="primary-hover"><i class="icon-vimeo"></i></a></li>
+                    <% end_if %>
+                    <% if URL %>
+                      <li><a href="$YouTubeURL"  target="_blank" class="primary-hover"><i class="icon-youtube"></i></a></li>
+                    <% end_if %>
+                    <% if $GooglePlusURL %>
+                      <li><a href="$URL"  target="_blank" class="primary-hover"><i class="icon-googleplus"></i></a></li>
+                    <% end_if %>
+
                 </ul>
                 <% end_with %>
 
                 <div class="clearfix"></div>
 
                 <p class="m-t-45 m-b-45">
-                  <a href="#top" class="primary-color"><i class="material-icons">keyboard_arrow_up</i></a>
+                  <a href="#top" class="primary-color"><i class="material-icons">arrow_upward</i></a>
                 </p>
 
                 <small>&copy; {$Now.Year} $SiteConfig.Title</small>
@@ -47,9 +70,3 @@
   ga('send', 'pageview');
 
 </script> --%>
-
-<%-- <!-- Main Javascript -->
-<script src="$ThemeDir/assets/js/main.js"></script>
-<script src="$ThemeDir/scripts/main.min.js"></script>
-
- --%>

@@ -38,6 +38,20 @@ class Video extends DataObject {
     }
   }
 
+  function canDelete($member = NULL) {
+    return Permission::check('CMS_ACCESS');
+  }
+  function canCreate($member = NULL) {
+    return Permission::check('CMS_ACCESS');
+  }
+  function canEdit($member = NULL) {
+    return Permission::check('CMS_ACCESS');
+  }
+  function canView($member = NULL) {
+    return Permission::check('CMS_ACCESS');
+  }
+
+
 }
 
 ?>

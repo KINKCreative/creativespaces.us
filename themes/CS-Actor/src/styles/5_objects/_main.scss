@@ -14,8 +14,6 @@
 /* Main
    ========================================================================== */
 
-// @import "";
-
 .inline-block {
   float: none;
   display: inline-block;
@@ -24,3 +22,6 @@
 .img-responsive {
   width: 100%;
 }
+
+
+@import "quotes";

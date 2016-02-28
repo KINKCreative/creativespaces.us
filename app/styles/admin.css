@@ -10,3 +10,13 @@ ADMIN STYLE OVERRIDES
 .fieldholder-small-label[for="EmbeddedObject_extraclass"] {
   display: none !important;
 }
+
+
+.ss-gridfield-table td.col-Thumbnail {
+  width: 200px !important;
+}
+
+
+#Stars ul li {
+  width: 15%;
+}

@@ -9,9 +9,9 @@
             </button>
 
             <!-- Logo link and image -->
-            <a class="navbar-brand primary-color" href="index.html#header-section">
+            <a class="navbar-brand primary-color" href="/#header-section">
                 <% if SiteConfig.Logo %>
-                    $SiteConfig.Logo.SetWidth(200)
+                    <img src="$SiteConfig.Logo.FitMax(600,100).URL" class="navbar-logo" />
                 <% else %>
                     $SiteConfig.Title
                 <% end_if %>
@@ -39,7 +39,7 @@
                         <!-- SLIDE NR.1  -->
                         <li data-transition="fade" data-slotamount="5" data-masterspeed="700" >
 
-                            <img src="$Image.CroppedImage(1422,800).URL"  alt="Slider Image $Pos"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                            <img src="$Image.FocusFill(1422,800).URL"  alt="Slider Image $Pos"  data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
 
                             <div class="tp-caption slider-text-big lfb ltt tp-resizeme"
                                 data-x="center" data-hoffset="0"

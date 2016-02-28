@@ -35,8 +35,16 @@ body {
   }
 }
 
+.header-nav-white .navbar-toggle .icon-bar {
+  background-color: #000000;
+}
+
 .navbar-brand {
   line-height: 60px;
+  .navbar-logo {
+    height: 60px;
+    width: auto;
+  }
 }
 
 .material-icons {

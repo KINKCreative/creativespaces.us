@@ -15,6 +15,8 @@
 
         $Layout
 
+        <% include Sections %>
+
         <% include Footer %>
 
     </body>

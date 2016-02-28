@@ -25,13 +25,17 @@ class Page extends SiteTree {
 		$fields->removeByName("copytosubsite");
 
 	 	$gridFieldConfig = GridFieldConfig_RecordEditor::create();
-		$gridFieldConfig->addComponent(new GridFieldBulkManager());
 		$gridFieldConfig->addComponent(new GridFieldBulkImageUpload());
-		$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
-		$photoManager = new GridField("Images", "Images", $this->Images()->sort("SortOrder"), $gridFieldConfig);
+		$gridFieldConfig->addComponent(new GridFieldOrderableRows('SortOrder'));
+		$photoManager = new GridField("Images", "Images", $this->Images(), $gridFieldConfig);
+
+    if($s = Subsite::currentSubsite()) {
+      $gridFieldConfig->getComponentByType("GridFieldBulkImageUpload")->setConfig('folderName', $s->BaseFolder . "/images");
+    }
 
 		$imageField = UploadField::create('Image','Choose main image')->setAllowedFileCategories('image');
 		$imageField->appendUploadFolder("images");
+
 
 		$fields->addFieldToTab("Root.Images",new HeaderField("ImageNote","Main image",3));
 		$fields->addFieldToTab("Root.Images",$imageField);
@@ -40,7 +44,6 @@ class Page extends SiteTree {
 		$fields->addFieldToTab("Root.Images",$photoManager);
 
 	 	$fields->addFieldToTab("Root.Main", new TextareaField("Summary","Enter summary"));
-
 
 	 	if(Permission::check('ADMIN')){
 	 		// $fields->removeByName("Settings");
@@ -129,34 +132,21 @@ class Page_Controller extends ContentController {
 
       Requirements::clear('jsparty/prototype.js');
 
-      if(substr(SSViewer::current_theme(), 0, 3) =="CS-") {
-	      $themeFolder = $this->ThemeDir();
+      $rootFolder = dirname(dirname(__DIR__));
+      $themeFolder = $this->ThemeDir();
+      $file = file_get_contents($rootFolder . '/' . $themeFolder . '/ss_import.json', true);
 
-	      $include_final = array();
-	      $include_list = array(
-	        '/assets/plugins/jquery-1.11.2.min.js',
-	        "/assets/plugins/modernizr-2.8.3.js",
-	        "/assets/plugins/jquery.easing.min.js",
-	        "/assets/plugins/scrollReveal.min.js",
-	        "/assets/plugins/numscroller-1.0.js",
-	        "/assets/plugins/typed.min.js",
-	        "/assets/plugins/magnific/jquery.magnific-popup.min.js",
-	        "/assets/plugins/owl-carousel/owl.carousel.min.js",
-	        // "/assets/plugins/retina.min.js",
-	        "/assets/plugins/jquery.mb.YTPlayer.js",
-	        "/assets/plugins/cubeportfolio/js/jquery.cubeportfolio.min.js",
-	        "/assets/plugins/jquery.simpleparallax.min.js",
-	        "/assets/plugins/bootstrap/js/bootstrap.min.js",
-	        "/assets/plugins/rs-plugin/js/jquery.themepunch.tools.min.js",
-	        "/assets/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js",
-	        '/vendor/jquery-smooth-scroll/jquery.smooth-scroll.js'
-	      );
+      if($file) {
+      	$import = json_decode($file, true);
 
-	      foreach($include_list as $include) {
-	      	$include_final[] = $themeFolder . $include;
-	      }
+      	$include_final = array();
+      	if(!!$import["js"] && count($import["js"])>0) {
+      		foreach($import["js"] as $include) {
+		      	$include_final[] = $themeFolder . $include;
+		      }
+      	}
 
-	      Requirements::combine_files(
+      	Requirements::combine_files(
 	        'vendor.js', $include_final
 	      );
 
@@ -164,7 +154,9 @@ class Page_Controller extends ContentController {
 	        $themeFolder . '/assets/js/main.js',
 	        $themeFolder . '/scripts/main.min.js'
 	      ));
-	    }
+
+      }
+
   }
 
 	public function ImageCount() {
@@ -289,5 +281,107 @@ class Page_Controller extends ContentController {
 			return $s;
 		}
 	}
+
+	public function ValidPageTypes() {
+		return array(
+			'HomePage' => array(
+				'Label' => 'Home',
+				'Required' => 1,
+				'Checked' => 1,
+				'URLSegment' => 'home',
+				'Title' => 'Home'
+			),
+			'Bio' => array(
+				'Label' => 'About me / Biography',
+				'Required' => 0,
+				'Checked' => 1,
+				'URLSegment' => 'about',
+			),
+			'Gallery' => array(
+				'Label' => 'Gallery',
+				'Required' => 0,
+				'Checked' => 1,
+				'URLSegment' => 'gallery',
+				'Title' => 'Gallery'
+			),
+			'VideoPage' => array(
+				'Label' => 'Videos',
+				'Required' => 0,
+				'Checked' => 1,
+				'URLSegment' => 'videos',
+				'Title' => 'Videos'
+			),
+			'ResumePage' => array(
+				'Label' => 'Resume page (to upload an image of your resume)',
+				'Required' => 0,
+				'Checked' => 1,
+				'URLSegment' => 'resume',
+				'Title' => 'Gallery'
+			),
+			'Quotes' => array(
+				'Label' => 'Quotes/Reviews',
+				'Required' => 0,
+				'Checked' => 0,
+				'URLSegment' => 'reviews',
+				'Title' => 'Reviews'
+			),
+			'ContactPage' => array(
+				'Label' => 'Contact page',
+				'Required' => 0,
+				'Checked' => 1,
+				'URLSegment' => 'contact',
+				'Title' => 'Contact me'
+			)
+		);
+	}
+
+
+	/* CUSTOM FORMS */
+
+	public function OrderForm() {
+        $fields = new FieldList();
+        $pageTypeArray = array();
+        $checkedTypes = array();
+        foreach($this->ValidPageTypes() as $key=>$pt) {
+        	$pageTypeArray[$key] = $pt["Label"];
+        	if($pt["Checked"]) {
+        		$checkedTypes[] = $key;
+        	}
+        }
+        $fields
+        	->header("h1", "Your New Website", 3)
+        	->text('Domain', 'Domain (if you have one)')
+        		->configure()
+        			->setAttribute("placeholder", "www.example.com")
+        		->end()
+        	->header("h1", "Your Information", 3)
+        	->text('Name')
+        	->email('Email')
+        	->password('Password')
+        	->password('PasswordConfirm')
+        	->checkboxSet('PageTypes','Select pages you will need', $pageTypeArray, $checkedTypes)
+        	// ->text('Unions', 'Your Unions')
+        	;
+        //     TextField::create('Name', 'Your Name'),
+        //     TextField::create('')
+        // );
+
+        $actions = new FieldList(
+            FormAction::create("doOrder")->setTitle("Sign up now")
+        );
+
+        $required = new RequiredFields('Name');
+
+        $form = new Form($this, 'OrderForm', $fields, $actions, $required);
+
+        return $form;
+    }
+
+     public function doOrder($data, Form $form) {
+        $form->sessionMessage('Hello '. $data['Name'], 'success');
+
+        return $this->redirectBack();
+    }
+
 
 }

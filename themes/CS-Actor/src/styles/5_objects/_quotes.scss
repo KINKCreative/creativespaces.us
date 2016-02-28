@@ -1,0 +1,13 @@
+/**
+ * objects/_quotes.scss
+ */
+
+ .quote {
+  blockquote {
+    border: none;
+    font-weight: 700;
+  }
+  .name {
+    text-transform: uppercase;
+  }
+ }

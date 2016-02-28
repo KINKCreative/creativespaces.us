@@ -1,16 +1,16 @@
 <?php
 
 class ArticleImage extends DataObject {
-	
+
 	private static $db = array(
 		'Caption' => 'Text'
 	);
-	
+
 	private static $has_one = array (
 		'Article' => 'Article',
 		'Image' => 'Image'
 	);
-	
+
 //	function getCMSFields_forPopup() {
 //
 //		$myField = new ImageUploadField('Image','Select image');
@@ -19,27 +19,31 @@ class ArticleImage extends DataObject {
 //			new TextField('Caption')
 //		);
 //	}
-		
-	function canDelete($member = NULL) { 
-		return true; //return Permission::check('CMS_ACCESS_CMSMain'); 
+
+	function canDelete($member = NULL) {
+		return Permission::check('CMS_ACCESS');
 	}
-	function canCreate($member = NULL) { 
-		return true; // Permission::check('CMS_ACCESS_CMSMain'); 
+	function canCreate($member = NULL) {
+		Permission::check('CMS_ACCESS');
 	}
-	function canEdit($member = NULL) { 
-		return true; //return Permission::check('CMS_ACCESS_CMSMain'); 
+	function canEdit($member = NULL) {
+		return Permission::check('CMS_ACCESS');
 	}
-	/*	
+	function canView($member = NULL) {
+		return Permission::check('CMS_ACCESS');
+	}
+
+	/*
 	public function Landscape()
 	{
 		return $this->File()->getWidth() > $this->File()->getHeight();
 	}
-	
+
 	public function Portrait()
 	{
 		return $this->File()->getWidth() < $this->File()->getHeight();
 	}
-	
+
 	public function Large()
 	{
 		if($this->Landscape())
@@ -49,18 +53,18 @@ class ArticleImage extends DataObject {
 		}
 	}
 	*/
-	
+
 	function Link() {
 		return $this->Article()->Link();
 	}
-	
+
 	public function RandColSize() {
 		return rand(2,3);
 	}
 	function getTitle() {
 		return $this->Article()->Title;
 	}
-	
+
 }
 
 

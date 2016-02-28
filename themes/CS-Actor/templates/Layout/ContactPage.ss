@@ -41,7 +41,13 @@
                 <% end_with %>
             </div>
             <div class="col-md-6">
-                $ContactForm
+                <% if not Success %>
+                    $ContactForm
+                <% else %>
+                    <div class="panel p-20">
+                        <h3>Thanks for your submission!</h3>
+                    </div>
+                <% end_if %>
             </div>
 
         </div>

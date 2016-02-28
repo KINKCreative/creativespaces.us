@@ -30,7 +30,8 @@ class SiteConfigDecorator extends DataExtension {
   );
 
   static $has_one = array(
-    'Resume' => 'File'
+    'Resume' => 'File',
+    'Logo' => 'Image'
   );
 
   public function updateCMSFields(FieldList $fields) {
@@ -48,6 +49,13 @@ class SiteConfigDecorator extends DataExtension {
         ->setThumbnailWidth(200)
         ->setAutoProcessQueue(true) // do not upload files until user clicks an upload button
         ->setMaxFilesize(10)
+    );
+    // $resume->appendUploadFolder("resume");
+
+    $logoField = UploadField::create('Logo','Upload logo')->setAllowedFileCategories('image');
+    $logoField->appendUploadFolder("images");
+    $fields->addFieldToTab("Root.Style",
+       $logoField
     );
 
     $fields

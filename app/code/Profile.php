@@ -1,7 +1,7 @@
 <?php
 
 class Profile extends DataObject {
-	
+
 	private static $db = array(
 		'Title' => 'Varchar(255)',
 		'JobPosition' => 'Varchar(125)',
@@ -15,14 +15,14 @@ class Profile extends DataObject {
 		'Facebook' => 'Varchar(255)',
 		'Website' => 'Varchar(255)'
 	);
-	
+
 	private static $has_one = array (
 		'ProfilePage' => 'ProfilePage',
 		'Image' => 'Image'
 	);
-	
+
 	private static $default_sort = "SortOrder ASC";
-		
+
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
 
@@ -31,19 +31,19 @@ class Profile extends DataObject {
 		$fields->addFieldToTab("Root.Main", $myField);
 		return $fields;
 	}
-		
-	function canDelete($member = NULL) { 
-		return Permission::check('CMS_ACCESS_CMSMain'); 
+
+	function canDelete($member = NULL) {
+		return Permission::check('CMS_ACCESS');
 	}
-	function canCreate($member = NULL) { 
-		return Permission::check('CMS_ACCESS_CMSMain'); 
+	function canCreate($member = NULL) {
+		return Permission::check('CMS_ACCESS');
 	}
-	function canEdit($member = NULL) { 
-		return Permission::check('CMS_ACCESS_CMSMain'); 
+	function canEdit($member = NULL) {
+		return Permission::check('CMS_ACCESS');
 	}
 
-	function canView($member = NULL) { 
-		return Permission::check('CMS_ACCESS_CMSMain'); 
+	function canView($member = NULL) {
+		return Permission::check('CMS_ACCESS');
 	}
 
 	static $summary_fields = array(
@@ -52,17 +52,17 @@ class Profile extends DataObject {
 		"Created"
 	);
 
-	/*	
+	/*
 	public function Landscape()
 	{
 		return $this->File()->getWidth() > $this->File()->getHeight();
 	}
-	
+
 	public function Portrait()
 	{
 		return $this->File()->getWidth() < $this->File()->getHeight();
 	}
-	
+
 	public function Large()
 	{
 		if($this->Landscape())
@@ -72,7 +72,7 @@ class Profile extends DataObject {
 		}
 	}
 	*/
-	
+
 //	function Link() {
 //		if($this->Link) {
 //			return $this->Link;

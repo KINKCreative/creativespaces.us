@@ -50,7 +50,7 @@ class ContactPage_Controller extends Page_Controller {
 
       // Create action
       $actions = new FieldList(
-        FormAction::create('SendContactForm', 'Send')->addExtraClass("btn btn-primary")
+        FormAction::create('SendContactForm', 'Send')->addExtraClass("button btn btn-primary")
       );
 
       // Create action
@@ -78,13 +78,14 @@ class ContactPage_Controller extends Page_Controller {
       //send mail
       $email->send();
         //return to submitted message
-      Director::redirect(Director::baseURL(). $this->URLSegment . "/?success=1");
+      $this->redirect( $this->URLSegment . "/?success=1");
 
     }
 
     //The function to test whether to display the Submit Text or not
     public function Success()
     {
-      return isset($_REQUEST['success']) && $_REQUEST['success'] == "1";
+      $success = $this->request->requestVar("success");
+      return $success == "1";
     }
 }

@@ -58,13 +58,13 @@ class PageSection extends DataObject {
 	}
 
 	function canDelete($member = NULL) {
-		return Permission::check('CMS_ACCESS_CMSMain');
+		return Permission::check('CMS_ACCESS');
 	}
 	function canCreate($member = NULL) {
-		return Permission::check('CMS_ACCESS_CMSMain');
+		return Permission::check('CMS_ACCESS');
 	}
 	function canEdit($member = NULL) {
-		return Permission::check('CMS_ACCESS_CMSMain');
+		return Permission::check('CMS_ACCESS');
 	}
 
 }

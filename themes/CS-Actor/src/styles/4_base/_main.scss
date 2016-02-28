@@ -8,3 +8,17 @@
 
 @import "rook";
 @import "elegant-icons";
+
+
+.ResumePage .shadow {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+input[type=checkbox],
+input[type=radio] {
+  width: auto;
+  display: inline-block;
+  margin-right: 8px;
+}

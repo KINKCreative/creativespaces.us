@@ -166,7 +166,7 @@ class SubsiteFileExtension extends DataExtension
             return true;
         } else {
             Session::set('SubsiteID', $this->owner->SubsiteID);
-            $access = Permission::check('CMS_ACCESS_CMSMain');
+            $access = Permission::check('CMS_ACCESS');
             Session::set('SubsiteID', $subsiteID);
 
             return $access;

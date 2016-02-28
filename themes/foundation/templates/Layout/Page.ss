@@ -7,6 +7,7 @@
 				<h2>$Title</h2>
 				$Content
 				$Form
+				<% if not Success %> $ContactForm <% end_if %>
 				<% include Images %>
 			</article>
 		</div>

@@ -2238,7 +2238,7 @@ textarea:focus, select:focus {
   height: 600px;
   width: auto; }
 
-.contact-form input, select {
+form input, .contact-form input, select {
   width: 100%;
   padding: 12.9px;
   color: #111;
@@ -2248,7 +2248,7 @@ textarea:focus, select:focus {
   border-radius: 0;
   height: auto; }
 
-.contact-form textarea {
+form textarea, .contact-form textarea {
   width: 100%;
   padding: 13px;
   color: #444;
@@ -3290,7 +3290,44 @@ textarea:focus, select:focus {
 /*--------------------------------------
   21) PAGE LOADER
 ---------------------------------------*/
+/* NEW SPINNER */
 .spinner {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 100px auto; }
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out; }
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s; }
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% {
+    -webkit-transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1); } }
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0); }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1); } }
+
+.spinner-oriignal {
   width: 60px;
   height: 60px;
   background-color: #111;
@@ -3675,6 +3712,17 @@ textarea:focus, select:focus {
 .icon-dribbble:before {
   content: "\e063"; }
 
+.ResumePage .shadow {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3); }
+
+input[type=checkbox],
+input[type=radio] {
+  width: auto;
+  display: inline-block;
+  margin-right: 8px; }
+
 /* ==========================================================================
    Objects
    ========================================================================== */
@@ -3697,6 +3745,16 @@ textarea:focus, select:focus {
 
 .img-responsive {
   width: 100%; }
+
+/**
+ * objects/_quotes.scss
+ */
+.quote blockquote {
+  border: none;
+  font-weight: 700; }
+
+.quote .name {
+  text-transform: uppercase; }
 
 /* ==========================================================================
    Vendor
@@ -3734,6 +3792,9 @@ textarea:focus, select:focus {
   .jumbotron .container {
     z-index: 2; }
 
+h1 {
+  color: #000000; }
+
 /* ==========================================================================
    Trumps
    ========================================================================== */
@@ -3767,8 +3828,14 @@ body {
       display: block;
       text-align: center; } }
 
+.header-nav-white .navbar-toggle .icon-bar {
+  background-color: #000000; }
+
 .navbar-brand {
   line-height: 60px; }
+  .navbar-brand .navbar-logo {
+    height: 60px;
+    width: auto; }
 
 .material-icons.md-18 {
   font-size: 18px; }

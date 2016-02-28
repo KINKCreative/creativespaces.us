@@ -3,7 +3,7 @@
     <div class="container">
 
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-12 col-md-10 col-md-push-1">
 
                 <% if SiteConfig.Resume %>
                     <div data-sr="enter bottom over 1.3s and move 65px" class="pull-right m-t-15">
@@ -14,7 +14,7 @@
                 <p>$Content</p>
 
                 <% if Image %>
-                    <img src="$Image.SetWidth(1200).URL" class="img-responsive" />
+                    <img src="$Image.SetWidth(1275).URL" class="img-responsive shadow" />
                 <% end_if %>
 
             </div>

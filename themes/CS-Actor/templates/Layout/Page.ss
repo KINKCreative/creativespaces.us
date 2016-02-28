@@ -13,29 +13,33 @@
 <!-- End Project Single Header -->
 <% end_if %>
 
-<% if Content %>
 <section id="content-section" class="section-padding">
 
     <div class="container">
 
         <div class="row">
-            <div class="col-sm-6">
+            <div class="<% if Image %>col-md-6<% else %>col-sm-12<% end_if %>">
 
                 <h1>$Title</h1>
                 <p>$Content</p>
                 $Form
 
+                <% if $URLSegment == "order" %>
+                    $OrderForm
+                <% end_if %>
+
             </div>
-            <div class="col-sm-6">
-                <img class="img-responsive" src="$Image.SetWidth(800).URL" alt="Image-$Image.ID" />
+            <% if Image %>
+            <div class="col-md-6">
+                <img class="img-responsive" src="$Image.CroppedImage(800,1000).URL" alt="Image-$Image.ID" />
             </div>
+            <% end_if %>
 
         </div>
 
     </div>
 
 </section>
-<% end_if %>
 
 <% include Gallery %>
 

@@ -21,8 +21,19 @@ class Quote extends DataObject {
 			new TextareaField('QuoteText'),
 			new TextField('Name'),
 			new TextField('Link'),
-			new OptionSetField("Stars", "Stars", array(1,2,3,4,5))
+			new OptionSetField("Stars", "Stars", array(""=>"None", 1=>1,2=>2,3=>3,4=>4,5=>5))
 		);
+	}
+
+	public function StarLoop($value='<i class="material-icons">star</i>') {
+		if(!$this->Stars) {
+			return false;
+		}
+		$result = new ArrayList(); //array_fill(0, (int)$this->Stars, $value);
+		for($i=0; $i < (int)$this->Stars; $i++) {
+			$result->push(new ArrayData(array("Value" => $value)));
+		}
+		return $result;
 	}
 
 }
