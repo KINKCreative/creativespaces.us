@@ -35,7 +35,6 @@
                         <% end_if %>
 
                         <% if Phone %><abbr title="Phone Number">Phone:</abbr> $Phone<br><% end_if %>
-                        <% if Email %><abbr title="Email Address">Email:</abbr> <a href="mailto:$Email">$Email</a><% end_if %>
 
                     </div>
                 <% end_with %>

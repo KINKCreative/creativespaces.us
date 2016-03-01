@@ -25,12 +25,12 @@ class Page extends SiteTree {
 		$fields->removeByName("copytosubsite");
 
 	 	$gridFieldConfig = GridFieldConfig_RecordEditor::create();
-		$gridFieldConfig->addComponent(new GridFieldBulkImageUpload());
+		$gridFieldConfig->addComponent(new GridFieldBulkUpload());
 		$gridFieldConfig->addComponent(new GridFieldOrderableRows('SortOrder'));
 		$photoManager = new GridField("Images", "Images", $this->Images(), $gridFieldConfig);
 
     if($s = Subsite::currentSubsite()) {
-      $gridFieldConfig->getComponentByType("GridFieldBulkImageUpload")->setConfig('folderName', $s->BaseFolder . "/images");
+      $gridFieldConfig->getComponentByType("GridFieldBulkUpload") ->setUfSetup('setFolderName', $s->BaseFolder . "/images");
     }
 
 		$imageField = UploadField::create('Image','Choose main image')->setAllowedFileCategories('image');

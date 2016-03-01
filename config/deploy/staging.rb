@@ -9,4 +9,4 @@ role :web, %w{deploy@creativespaces.us}
 role :db,  %w{deploy@creativespaces.us}
 
 
-server 'creativespaces.us', user: 'deploy', roles: %w{web app}, my_property: :my_value
+# server 'creativespaces.us', user: 'deploy', roles: %w{web app}, my_property: :my_value

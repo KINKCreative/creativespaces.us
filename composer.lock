@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "80c63112e97bab7fe205b99c6e796524",
+    "hash": "f7278d04c1ef153fd5b8eb2e578b528a",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -264,6 +264,52 @@
                 "silverstripe"
             ],
             "time": "2015-12-18 19:03:42"
+        },
+        {
+            "name": "praxisnetau/silverstripe-moderno-admin",
+            "version": "dev-master",
+            "target-dir": "silverstripe-moderno-admin",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/praxisnetau/silverstripe-moderno-admin.git",
+                "reference": "4a263511d856c6e75dc0b31abbae99932727a4a8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/praxisnetau/silverstripe-moderno-admin/zipball/4a263511d856c6e75dc0b31abbae99932727a4a8",
+                "reference": "4a263511d856c6e75dc0b31abbae99932727a4a8",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2",
+                "silverstripe/framework": "~3.1"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "installer-name": "silverstripe-moderno-admin"
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Colin Tucker",
+                    "email": "colin@praxis.net.au"
+                }
+            ],
+            "description": "A SilverStripe module to give the CMS a more modern, flat appearance.",
+            "homepage": "https://github.com/praxisnetau/silverstripe-moderno-admin",
+            "keywords": [
+                "admin",
+                "cms",
+                "flat",
+                "moderno",
+                "silverstripe",
+                "skin",
+                "theme"
+            ],
+            "time": "2016-02-25 23:06:45"
         },
         {
             "name": "ryanpotter/silverstripe-color-field",
@@ -974,12 +1020,13 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {
         "gdmedia/ss-auto-git-ignore": 20,
         "unclecheese/dropzone": 20,
         "silverstripe/subsites": 20,
-        "undefinedoffset/sortablegridfield": 20
+        "undefinedoffset/sortablegridfield": 20,
+        "praxisnetau/silverstripe-moderno-admin": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

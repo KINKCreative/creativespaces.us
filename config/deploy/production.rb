@@ -8,4 +8,4 @@ role :app, %w{deploy@ftp.creativespaces.us}
 role :web, %w{deploy@ftp.creativespaces.us}
 role :db,  %w{deploy@ftp.creativespaces.us}
 
-server 'ftp.creativespaces.us', user: 'deploy', roles: %w{web app}, my_property: :my_value
+# server 'ftp.creativespaces.us', user: 'deploy', roles: %w{web app}, my_property: :my_value
