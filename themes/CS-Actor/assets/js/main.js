@@ -82,7 +82,7 @@
 
             delay: -1,
             startwidth:1170,
-            startheight:700,
+            startheight:650,
 
             hideThumbs:200,
 

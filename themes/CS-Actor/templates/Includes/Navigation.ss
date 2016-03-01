@@ -19,6 +19,18 @@
 
     <% end_loop %>
 
+    <% with $SiteConfig %>
+        <% if FacebookURL %>
+          <li class="social"><a href="$FacebookURL" target="_blank"><i class="fi-social-facebook"></i></a></li>
+        <% end_if %>
+        <% if TwitterURL %>
+          <li class="social"><a href="$TwitterURL"  target="_blank"><i class="fi-social-twitter"></i></a></li>
+        <% end_if %>
+        <% if InstagramURL %>
+          <li class="social"><a href="$InstagramURL" target="_blank"><i class="fi-social-instagram"></i></a></li>
+        <% end_if %>
+    <% end_with %>
+
     <li class="visible-xs m-t-80">
         <a href="#" data-toggle="collapse" data-target=".navbar-main-collapse">
             <i class="material-icons md-24">close</i>

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="$ThemeDir/dist/assets/plugins/magnific/magnific-popup.css">
     <link rel="stylesheet" href="$ThemeDir/dist/assets/plugins/owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="$ThemeDir/dist/assets/plugins/owl-carousel/owl.theme.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css">
 
     <!-- Main CSS -->
     <link href="$ThemeDir/dist/styles/main.css" rel="stylesheet">
@@ -75,6 +76,11 @@
             }
             .btn-primary:hover {
                 background-color: #555555;
+            }
+            @media (max-width: 768px) {
+              .header-navbar .navbar-collapse {
+                background: $SiteConfig.PrimaryColor;
+              }
             }
         </style>
     <% end_if %>

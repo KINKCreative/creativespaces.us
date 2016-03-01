@@ -51,7 +51,7 @@
                   <a href="#top" class="primary-color"><i class="material-icons">arrow_upward</i></a>
                 </p>
 
-                <small>&copy; {$Now.Year} $SiteConfig.Title</small>
+                <small>&copy; {$Now.Year} $SiteConfig.Title <% if SiteConfig.Tagline %> | $SiteConfig.Tagline<% end_if %></small>
 
         </div> <!-- /.row -->
     </div> <!-- /.container -->

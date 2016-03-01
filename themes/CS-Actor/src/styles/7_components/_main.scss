@@ -6,7 +6,7 @@
    Imports
    ========================================================================== */
 
-// @import "";
+@import "navigation";
 
 .jumbotron {
   position: relative;
@@ -25,4 +25,26 @@
 
 h1 {
   color: #000000;
+}
+
+
+.align-bottom {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+#header-section {
+  .tp-banner-container {
+    h1 {
+      color: #FFFFFF;
+      font-weight: 300;
+      text-transform: uppercase;
+    }
+    h3 {
+      color: #FFFFFF;
+    }
+  }
 }

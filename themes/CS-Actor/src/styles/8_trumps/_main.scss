@@ -11,42 +11,6 @@ body {
   padding-top: 100px;
 }
 
-@media (max-width: 768px) {
-  .header-navbar .navbar-collapse {
-      position: fixed;
-      right: 0;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      text-align: center;
-      background: rgba(0,0,0,0.9);
-      padding: 60px;
-
-      li {
-        background: none !important;
-      }
-
-      .navbar-brand {
-        width: 100%;
-        display: block;
-        text-align: center;
-      }
-
-  }
-}
-
-.header-nav-white .navbar-toggle .icon-bar {
-  background-color: #000000;
-}
-
-.navbar-brand {
-  line-height: 60px;
-  .navbar-logo {
-    height: 60px;
-    width: auto;
-  }
-}
-
 .material-icons {
 
   // Rules for sizing the icons.
