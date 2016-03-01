@@ -27,13 +27,21 @@ h1 {
   color: #000000;
 }
 
-
-.align-bottom {
+.tp-banner-container {
+  .align-bottom {
     position: absolute;
-    bottom: 60px;
+    bottom: 50px;
     left: 0;
     right: 0;
     width: 100%;
+    @media(max-width: 600px) {
+      .btn {
+        display: block !important;
+        max-width: 300px !important;
+        margin: auto !important;
+      }
+    }
+  }
 }
 
 #header-section {

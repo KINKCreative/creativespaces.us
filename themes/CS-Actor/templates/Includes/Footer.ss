@@ -35,7 +35,7 @@
                     <% if $VimeoURL %>
                       <li><a href="$VimeoURL"  target="_blank" class="primary-hover"><i class="icon-vimeo"></i></a></li>
                     <% end_if %>
-                    <% if URL %>
+                    <% if $YouTubeURL %>
                       <li><a href="$YouTubeURL"  target="_blank" class="primary-hover"><i class="icon-youtube"></i></a></li>
                     <% end_if %>
                     <% if $GooglePlusURL %>

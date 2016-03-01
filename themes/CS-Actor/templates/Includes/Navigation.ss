@@ -20,6 +20,7 @@
     <% end_loop %>
 
     <% with $SiteConfig %>
+
         <% if FacebookURL %>
           <li class="social"><a href="$FacebookURL" target="_blank"><i class="fi-social-facebook"></i></a></li>
         <% end_if %>
@@ -29,6 +30,20 @@
         <% if InstagramURL %>
           <li class="social"><a href="$InstagramURL" target="_blank"><i class="fi-social-instagram"></i></a></li>
         <% end_if %>
+
+        <% if ActorsAccessURL || Resume || ImdbURL || ActorsGreenRoomURL %>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <% if ImdbURL %><li><a href="$ImdbURL" role="button" target="_blank">IMDB Profile</a></li><% end_if %>
+                <% if ActorsGreenRoomURL %><li><a href="$ActorsGreenRoomURL" role="button">AGR Member Profile</a></li><% end_if %>
+                <% if ActorsAccessURL %>
+                    <li><a href="$ActorsAccessURL" role="button" target="_blank">Actor's Access</a></li><% end_if %>
+                <% if Resume %><li><a href="$Resume.Link" role="button">Download Resume</a></li><% end_if %>
+              </ul>
+            </li>
+        <% end_if %>
+
     <% end_with %>
 
     <li class="visible-xs m-t-80">
