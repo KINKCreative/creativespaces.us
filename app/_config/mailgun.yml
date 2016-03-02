@@ -1,0 +1,16 @@
+---
+After: 'silverstripe-mailgun'
+---
+Kinglozzer\SilverStripeMailgunner\Mailer:
+  api_domain: 'mg.creativespaces.us'
+  api_key: 'key-23d7968fca2b40cfdd14c40c0b930157'
+---
+After: 'silverstripe-mailgun'
+Only:
+  environment: 'dev'
+---
+# Get your own Postbin ID by visiting http://bin.mailgun.net
+Kinglozzer\SilverStripeMailgunner\Mailer:
+  api_endpoint: 'bin.mailgun.net'
+  api_ssl: false
+  api_version: 'd0c6184e'

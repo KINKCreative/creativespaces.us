@@ -1,7 +1,6 @@
+<% if ClassName=="HomePage" || Slider %>
 <!-- Header -->
 <section id="header-section" class="m-t--100">
-
-    <% if ClassName=="HomePage" || Slider %>
 
         <!-- Revolution Slider -->
         <div class="tp-banner-container">
@@ -78,10 +77,9 @@
             </div>
         </div><!-- End Revolution Slider -->
 
-    <% end_if %>
-
 </section>
 <!-- End Header -->
+<% end_if %>
 
 
 <nav class="navbar header-navbar header-nav-white navbar-fixed-top" role="navigation">

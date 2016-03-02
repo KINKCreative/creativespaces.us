@@ -6,6 +6,7 @@ class PageAdmin extends ModelAdmin
     private static $managed_models = array('SiteTree');
     private static $url_segment = 'Site';
     private static $menu_title = 'Site';
+    private static $awesome_icon = "fa-sitemap";
 
     public function getEditForm($id = null, $fields = null){
         $form = parent::getEditForm($id, $fields);
