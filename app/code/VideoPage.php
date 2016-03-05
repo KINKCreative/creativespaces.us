@@ -16,7 +16,7 @@ class VideoPage extends Page {
   private static $defaults = array(
   );
 
-  private static $allowed_children = array("none");
+  private static $allowed_children = "none";
 
   function getCMSFields() {
     $fields = parent::getCMSFields();

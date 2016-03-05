@@ -63,22 +63,32 @@ class ContactPage_Controller extends Page_Controller {
     //The function that handles our form submission
     function SendContactForm($data, $form)
     {
-      //Set data
-      $From = $data['Email'];
 
+      $config = SiteConfig::current_site_config();
+      if($config && $config->Email) {
 
+        //Set data
+        $from = "no-reply@creativespaces.us";
+        $userEmail = $data['Email'];
+        $to = $config->Email;
+        $subject = "Website Contact";
 
-      $To = $this->Mailto;
-      $Subject = "Website Contact";
-      $email = new Email($From, $To, $Subject);
-      //set template
-      $email->setTemplate('ContactEmail');
-      //populate template
-      $email->populateTemplate($data);
-      //send mail
-      $email->send();
-        //return to submitted message
-      $this->redirect( $this->URLSegment . "/?success=1");
+        $email = new Email($from, $to, $subject);
+        //set template
+        $email->setTemplate('ContactEmail');
+        //populate template
+        $email->populateTemplate($data);
+        // $email->addCustomHeader('X-Mailgunner-Batch-Message', true);
+        $email->replyTo($userEmail);
+        //send mail
+        $email->send();
+
+        $this->redirect( $this->URLSegment . "/?success=1");
+
+      }
+      else {
+        $this->redirect( $this->URLSegment . "/?success=0");
+      }
 
     }
 

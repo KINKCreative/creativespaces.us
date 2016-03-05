@@ -7,35 +7,35 @@ class ProfilePage extends Page {
 
 	private static $has_one = array(
 	);
-	
+
 	private static $has_many = array(
 		'Profiles' => 'Profile'
 	);
-	
+
 	private static $defaults = array(
 	);
-		
-	private static $allowed_children = array("none");
-	
+
+	private static $allowed_children = "none";
+
 	function getCMSFields() {
 	    $fields = parent::getCMSFields();
-	 	
-	 	$gridFieldConfig = GridFieldConfig_RecordEditor::create(50); 
+
+	 	$gridFieldConfig = GridFieldConfig_RecordEditor::create(50);
 		// $gridFieldConfig->addComponent(new GridFieldBulkManager());
-		// $gridFieldConfig->addComponent(new GridFieldBulkImageUpload());   
-		$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));    
-	
+		// $gridFieldConfig->addComponent(new GridFieldBulkImageUpload());
+		$gridFieldConfig->addComponent(new GridFieldSortableRows('SortOrder'));
+
 		$ProfileManager = new GridField("Profiles", "Profiles", $this->Profiles()->sort("SortOrder"), $gridFieldConfig);
-	 	
+
 	 	$fields->addFieldToTab("Root.Profiles",$ProfileManager);
-	 	
+
 		return $fields;
 	}
-		
+
 }
- 
+
 class ProfilePage_Controller extends Page_Controller {
-	
+
 	public function init() {
 		parent::init();
 //		date_default_timezone_set('America/Los_Angeles');
@@ -45,11 +45,11 @@ class ProfilePage_Controller extends Page_Controller {
 //			Director::redirect("/registrate");
 //		}
 	}
-	
+
 	public function SortedProfiles() {
 		return $this->Profiles()->sort("SortOrder ASC");
 	}
-	
+
 //	public function RMinute() {
 //		date_default_timezone_set('America/Los_Angeles');
 //		$minute = date('i', time());
@@ -62,7 +62,7 @@ class ProfilePage_Controller extends Page_Controller {
 //		}
 //		return $rminutes;
 //	}
-//	
+//
 //	public function RHour() {
 //		date_default_timezone_set('America/Los_Angeles');
 //		$hour = date('H', time());
@@ -72,7 +72,7 @@ class ProfilePage_Controller extends Page_Controller {
 //		}
 //		return $rhour;
 //	}
-//	
+//
 //	public function RSecond() {
 //			date_default_timezone_set('America/Los_Angeles');
 //			$second = date('s', time());
@@ -82,6 +82,6 @@ class ProfilePage_Controller extends Page_Controller {
 //			}
 //			return $rsecond;
 //		}
-		
+
 }
 
