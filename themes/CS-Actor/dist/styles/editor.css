@@ -2236,13 +2236,20 @@ textarea:focus, select:focus {
 
 form input, .contact-form input, select {
   width: 100%;
-  padding: 12.9px;
-  color: #111;
-  background: #fff;
-  border: 1px solid #F0F0F0;
-  box-shadow: none;
-  border-radius: 0;
-  height: auto; }
+  padding: 12.9px !important;
+  color: #111 !important;
+  background: #fff !important;
+  border: 1px solid #F0F0F0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  height: auto !important; }
+
+form .input-group-addon {
+  padding: 12.9px !important;
+  border: 1px solid #F0F0F0 !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  height: auto !important; }
 
 form textarea, .contact-form textarea {
   width: 100%;

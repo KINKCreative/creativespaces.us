@@ -25,7 +25,8 @@
       "colymba/gridfield-bulk-editing-tools": "~2.1",
       "silverstripe/googlesitemaps": "~1.4",
         "praxisnetau/silverstripe-moderno-admin": "dev-master",
-        "kinglozzer/silverstripe-mailgunner": "^1.0"
+        "kinglozzer/silverstripe-mailgunner": "^1.0",
+        "nathancox/codeeditorfield": "dev-master"
     },
     "scripts": {
       "post-update-cmd": "GDM\\SSAutoGitIgnore\\UpdateScript::Go"

@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a4ff013409f8ba3fbff96d67e483f938",
+    "hash": "788a4a869b792aa5018446c290f1febe",
     "packages": [
         {
             "name": "colymba/gridfield-bulk-editing-tools",
@@ -510,6 +510,49 @@
             ],
             "description": "The Mailgun SDK provides methods for all API functions.",
             "time": "2015-05-06 17:52:51"
+        },
+        {
+            "name": "nathancox/codeeditorfield",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nathancox/silverstripe-codeeditorfield.git",
+                "reference": "3ab5326b3aa548f17879b8872e3737545734b378"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nathancox/silverstripe-codeeditorfield/zipball/3ab5326b3aa548f17879b8872e3737545734b378",
+                "reference": "3ab5326b3aa548f17879b8872e3737545734b378",
+                "shasum": ""
+            },
+            "require": {
+                "silverstripe/framework": "~3.1"
+            },
+            "type": "silverstripe-module",
+            "extra": {
+                "screenshots": [
+                    "http://static.flyingmonkey.co.nz/github/silverstripe-codeeditorfield/codeeditorfield-1.png"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nathan Cox",
+                    "email": "me@nathan.net.nz"
+                }
+            ],
+            "description": "A field for editing code in the SilverStripe CMS using Ace Editor (http://ace.c9.io/)",
+            "homepage": "https://github.com/nathancox/silverstripe-codeeditorfield",
+            "keywords": [
+                "cms",
+                "form",
+                "formfield",
+                "silverstripe"
+            ],
+            "time": "2015-12-05 01:58:03"
         },
         {
             "name": "praxisnetau/silverstripe-moderno-admin",
@@ -1316,7 +1359,8 @@
         "unclecheese/dropzone": 20,
         "silverstripe/subsites": 20,
         "undefinedoffset/sortablegridfield": 20,
-        "praxisnetau/silverstripe-moderno-admin": 20
+        "praxisnetau/silverstripe-moderno-admin": 20,
+        "nathancox/codeeditorfield": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

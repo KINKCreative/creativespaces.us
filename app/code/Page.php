@@ -54,8 +54,8 @@ class Page extends SiteTree {
 			$sectionManager = new GridField("Sections", "Sections", $this->Sections()->sort("SortOrder"), $sectionConfig);
 
 
-	 		$fields->addFieldToTab("Root.Sections", $sectionManager);
-	 		$fields->addFieldToTab("Root.Advanced", new TextareaField("CustomHtml","Custom HTML code",4));
+	 		$fields->addFieldToTab("Root.Admin", $sectionManager);
+	 		$fields->addFieldToTab("Root.Admin", new CodeEditorField("CustomHtml","Custom HTML code",4));
 	 	}
 	 	else {
 	 		$imageField->setCanAttachExisting(false);
@@ -349,16 +349,24 @@ class Page_Controller extends ContentController {
         	}
         }
         $fields
-        	->header("h1", "Your New Website", 3)
-        	->text('Domain', 'Domain (if you have one)')
-        		->configure()
-        			->setAttribute("placeholder", "www.example.com")
-        		->end()
         	->header("h1", "Your Information", 3)
         	->text('Name')
         	->email('Email')
         	->password('Password')
         	->password('PasswordConfirm')
+          ->header("h1", "Your New Website", 3)
+          ->text('Domain', 'Domain (if you have one)')
+            ->configure()
+              ->setAttribute("placeholder", "www.example.com")
+            ->end()
+           ->text('Domain', 'Domain (if you have one)')
+            ->configure()
+              ->setAttribute("placeholder", "www.example.com")
+            ->end()
+          ->literal('Subdomain', '<div class="field text m-t-5"><label>Subdomain</label><div class="input-group m-b-10">'.
+              '<input type="text" class="form-control" placeholder="mysubdomain" aria-describedby="subdomain" name="Subdomain">'.
+              '<span class="input-group-addon" id="subdomain"><b>.creativespaces.us</b></span>'.
+              '</div></div>')
         	->checkboxSet('PageTypes','Select pages you will need', $pageTypeArray, $checkedTypes)
         	// ->text('Unions', 'Your Unions')
         	;
@@ -370,9 +378,10 @@ class Page_Controller extends ContentController {
             FormAction::create("doOrder")->setTitle("Sign up now")
         );
 
-        $required = new RequiredFields('Name');
+        $required = new RequiredFields('Name', 'Email');
 
         $form = new Form($this, 'OrderForm', $fields, $actions, $required);
+        $form->addExtraClass("col-md-8 col-md-push-2");
 
         return $form;
     }
