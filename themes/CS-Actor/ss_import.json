@@ -14,8 +14,8 @@
     "/assets/plugins/cubeportfolio/js/jquery.cubeportfolio.min.js",
     "/assets/plugins/jquery.simpleparallax.min.js",
     "/assets/plugins/bootstrap/js/bootstrap.min.js",
-    "/assets/plugins/rs-plugin/js/jquery.themepunch.tools.min.js",
-    "/assets/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js",
+    "/assets/plugins/revolution/js/jquery.themepunch.tools.min.js",
+    "/assets/plugins/revolution/js/jquery.themepunch.revolution.min.js",
     "/vendor/jquery-smooth-scroll/jquery.smooth-scroll.js"
   ],
   "css": {}

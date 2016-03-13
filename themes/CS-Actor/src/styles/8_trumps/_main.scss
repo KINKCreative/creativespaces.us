@@ -31,6 +31,9 @@ body {
 
 .tp-banner-container {
   background: #000;
+  .tp-bgimg {
+    opacity: 0.8;
+  }
 }
 
 .YTPOverlay {
@@ -95,4 +98,14 @@ body {
       }
     }
   }
+}
+
+
+// FORMS
+.field.date-alt input {
+    display: inline-block;
+    width: 80px;
+    &.year {
+      width: 120px;
+    }
 }

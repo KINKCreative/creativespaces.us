@@ -42,7 +42,7 @@
 
 
     <!-- Google Web Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Raleway:200,700|Material+Icons' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:300,700|Material+Icons' rel='stylesheet' type='text/css'>
 
     <meta property="og:title" content="$Title"/>
     <% if Item %>

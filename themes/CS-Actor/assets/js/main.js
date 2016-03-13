@@ -75,65 +75,68 @@
         //     startWithSlide:0,
         //     fullScreenOffsetContainer: ".header"
         // });
+        if(jQuery('.tp-banner-1').length > 0) {
 
-        // Revolution Slider Example 1
-        jQuery('.tp-banner-1').show().revolution(
-        {
+            // Revolution Slider Example 1
+            jQuery('.tp-banner-1').show().revolution(
+            {
 
-            delay: -1,
-            startwidth:1170,
-            startheight:650,
+                delay: -1,
+                startwidth:1170,
+                startheight:650,
 
-            hideThumbs:200,
+                hideThumbs:200,
 
-            thumbWidth:100,
-            thumbHeight:50,
-            thumbAmount:5,
+                thumbWidth:100,
+                thumbHeight:50,
+                thumbAmount:5,
 
-            navigationType: "none",
-            navigationArrows: "solo",
-            navigationStyle: "preview1",
+                navigationType: "none",
+                navigationArrows: "solo",
+                navigationStyle: "preview1",
 
-            touchenabled:"on",
-            onHoverStop:"on",
+                touchenabled:"on",
+                onHoverStop:"on",
 
-            swipe_velocity: 0.7,
-            swipe_min_touches: 1,
-            swipe_max_touches: 1,
-            drag_block_vertical: false,
+                swipe_velocity: 0.7,
+                swipe_min_touches: 1,
+                swipe_max_touches: 1,
+                drag_block_vertical: false,
 
-            keyboardNavigation:"on",
+                keyboardNavigation:"on",
 
-            shadow:0,
-            fullWidth:"off",
-            fullScreen:"on",
+                shadow:0,
+                fullWidth:"off",
+                fullScreen:"on",
 
-            spinner:"off",
+                spinner:"off",
 
-            stopLoop:"off",
-            stopAfterLoops:-1,
-            stopAtSlide:-1,
+                stopLoop:"off",
+                stopAfterLoops:-1,
+                stopAtSlide:-1,
 
-            shuffle:"off",
+                shuffle:"off",
 
-            forceFullWidth:"off",
-            fullScreenAlignForce:"off",
-            minFullScreenHeight:"400",
+                forceFullWidth:"off",
+                fullScreenAlignForce:"off",
+                minFullScreenHeight:"400",
 
-            hideThumbsOnMobile:"off",
-            hideNavDelayOnMobile:1500,
-            hideBulletsOnMobile:"off",
-            hideArrowsOnMobile:"off",
-            hideThumbsUnderResolution:0,
-            hideTimerBar:"on",
+                hideThumbsOnMobile:"off",
+                hideNavDelayOnMobile:1500,
+                hideBulletsOnMobile:"off",
+                hideArrowsOnMobile:"off",
+                hideThumbsUnderResolution:0,
+                hideTimerBar:"on",
 
-            hideSliderAtLimit:0,
-            hideCaptionAtLimit:0,
-            hideAllCaptionAtLilmit:0,
-            startWithSlide:0,
-            fullScreenOffsetContainer: ".header"
+                hideSliderAtLimit:0,
+                hideCaptionAtLimit:0,
+                hideAllCaptionAtLilmit:0,
+                startWithSlide:0,
+                fullScreenOffsetContainer: ".header"
 
-        });
+            });
+
+        }
 
         // // Revolution Slider Example 2
         // jQuery('.tp-banner-2').show().revolution(

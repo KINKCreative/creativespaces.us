@@ -1085,6 +1085,9 @@
 /* ==========================================================================
    Imports
    ========================================================================== */
+.shadow {
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3); }
+
 /* ==========================================================================
    Base
    ========================================================================== */
@@ -1140,7 +1143,7 @@ body {
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
-  color: #818181;
+  color: #555555;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: none; }
 
@@ -3924,6 +3927,8 @@ body {
 
 .tp-banner-container {
   background: #000; }
+  .tp-banner-container .tp-bgimg {
+    opacity: 0.8; }
 
 .YTPOverlay {
   background: rgba(0, 0, 0, 0.5); }
@@ -3968,5 +3973,11 @@ body {
     -webkit-transition: all 0.3s; }
   .gallery-grid .gallery-item a:hover img {
     opacity: 0.8; }
+
+.field.date-alt input {
+  display: inline-block;
+  width: 80px; }
+  .field.date-alt input.year {
+    width: 120px; }
 
 /*# sourceMappingURL=main.css.map */
