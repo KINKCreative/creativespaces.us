@@ -15,7 +15,6 @@
       "unclecheese/betterbuttons": "1.2.*",
       "unclecheese/dropzone": "dev-master",
       "silverstripe/subsites" : "1.1.x-dev",
-      "unclecheese/zen-fields" : "*",
       "undefinedoffset/sortablegridfield": "dev-master",
       "jonom/focuspoint": "2.0.1",
       "ryanpotter/silverstripe-color-field": "*",

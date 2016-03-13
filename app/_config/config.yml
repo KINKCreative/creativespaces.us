@@ -41,9 +41,6 @@ SiteConfig:
   extensions:
     - SiteConfigDecorator
 
-Director:
-  environment_type: 'dev'
-
 Profile:
   extensions:
     - SortableDataObject

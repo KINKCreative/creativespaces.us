@@ -13,4 +13,4 @@ Only:
 Kinglozzer\SilverStripeMailgunner\Mailer:
   api_endpoint: 'bin.mailgun.net'
   api_ssl: false
-  api_version: 'd0c6184e'
+  api_version: '41747d4c'
